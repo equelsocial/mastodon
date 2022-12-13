@@ -182,7 +182,7 @@
 .button-with-icon {
   i {
     color: darken($ui-highlight-color, 2%);
-    background-color: white;
+    background-color: $primary-text-color;
     padding: 2px 0px;
     border-radius: 3px;
     margin-right: 8px;
@@ -198,7 +198,7 @@
 
   &.button-tertiary {
     i {
-      color: #060607;
+      color: darken($ui-base-color, 7%);
       background-color: $highlight-text-color;
     }
 
@@ -207,7 +207,7 @@
     &:active {
       i {
         color: $ui-highlight-color;
-        background-color: white;
+        background-color: $primary-text-color;
       }
     }
   }
