@@ -179,6 +179,36 @@
   }
 }
 
+.button-with-icon {
+  i {
+    color: darken($ui-highlight-color, 2%);
+    background-color: white;
+    padding: 2px 0px;
+    border-radius: 3px;
+    margin-right: 8px;
+  }
+
+  &:hover {
+    i {
+      color: $ui-highlight-color;
+    }
+  }
+
+  &.button-tertiary {
+    i {
+      color: #060607;
+      background-color: $highlight-text-color;
+    }
+    
+    &:hover {
+      i {
+        color: $ui-highlight-color;
+        background-color: white;
+      }
+    }
+  }
+}
+
 .column__wrapper {
   display: flex;
   flex: 1 1 auto;

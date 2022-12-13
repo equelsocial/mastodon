@@ -535,7 +535,7 @@
   "server_banner.server_stats": "Serverové štatistiky:",
   "sign_in_banner.create_account": "Vytvor účet",
   "sign_in_banner.sign_in": "Prihlás sa",
-  "sign_in_banner.text": "Sign in to follow profiles or hashtags, favourite, share and reply to posts, or interact from your account on a different server.",
+  "sign_in_banner.text": "For a safe community, Equel members must use LinkedIn to sign in with their real identities.",
   "status.admin_account": "Otvor moderovacie rozhranie užívateľa @{name}",
   "status.admin_status": "Otvor tento príspevok v moderovacom rozhraní",
   "status.block": "Blokuj @{name}",

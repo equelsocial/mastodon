@@ -534,7 +534,7 @@
   "server_banner.learn_more": "Saber más",
   "server_banner.server_stats": "Estadístiques del sirvidor:",
   "sign_in_banner.create_account": "Crear una cuenta",
-  "sign_in_banner.sign_in": "Sign in",
+  "sign_in_banner.sign_in": "Log in",
   "sign_in_banner.text": "Anicia la sesión pa siguir a perfiles o etiquetes, marcar como favoritu, compartir o responder a artículos, o interactuar cola to cuenta nun sirvidor diferente.",
   "status.admin_account": "Open moderation interface for @{name}",
   "status.admin_status": "Open this status in the moderation interface",

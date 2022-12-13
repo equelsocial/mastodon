@@ -4175,7 +4175,7 @@
         "id": "sign_in_banner.create_account"
       },
       {
-        "defaultMessage": "Sign in to follow profiles or hashtags, favourite, share and reply to posts, or interact from your account on a different server.",
+        "defaultMessage": "For a safe community, Equel members must use LinkedIn to sign in with their real identities.",
         "id": "sign_in_banner.text"
       },
       {
