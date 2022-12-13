@@ -34,7 +34,7 @@ jobs:
       - name: Deploy to ${{ inputs.environment }} environment
         env:
           APP_NAME: ${{ inputs.app-name }}
-          CONFIG_FILE_NAME: ${{ inputs.infra-config-file-name }}
+          CONFIG_FILE_NAME: ${{ inputs.config-file-name }}
           ENV: ${{ inputs.environment }}
           IMAGE_TAG: ${{ inputs.image-tag }}
         run: |
