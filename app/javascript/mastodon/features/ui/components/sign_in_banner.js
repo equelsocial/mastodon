@@ -1,7 +1,6 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useRef } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Icon from 'mastodon/components/icon';
-import axios from 'axios';
 
 function getCSRFToken() {
   var CSRFSelector = document.querySelector('meta[name="csrf-token"]');
@@ -14,19 +13,6 @@ function getCSRFToken() {
 
 const SignInBanner = () => {
   const inputRef = useRef();
-
-  const navigateToLogin = useCallback(() => {
-    const authenticity_token = getCSRFToken();
-    axios
-      .post('/auth/auth/openid_connect', { authenticity_token })
-      .then(function (response) {
-        console.log(response.data);
-        if (response.data.redirect) {
-          console.log(response.data.redirect);
-          window.location = response.data.redirect;
-        }
-      });
-  });
 
   const onSubmit = () => {
     if (inputRef.current) {
