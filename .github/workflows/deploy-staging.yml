@@ -1,4 +1,4 @@
-name: Deploy to development environment
+run-name: Deploy ${{ github.ref_name }} to staging - ${{ github.actor }}
 
 on:
   push:
