@@ -2,7 +2,7 @@ name: Deploy to development environment
 
 on:
   push:
-    tags: v1.*
+    tags: v*
 
 jobs:
   linter:
