@@ -1,0 +1,39 @@
+name: Deploy to development environment
+
+on:
+  push:
+    tags: v1.*
+
+jobs:
+  linter:
+    uses: ./.github/workflows/linter.yml
+    secrets: inherit
+
+  check-i18n:
+    uses: ./.github/workflows/check-i18n.yml
+
+  build:
+    needs: [linter, check-i18n]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: whoan/docker-build-with-cache-action@v5
+      with:
+        username: ${{ secrets.AWS_KEY }}
+        password: ${{ secrets.AWS_SECRET }}
+        registry: 597227739235.dkr.ecr.eu-west-1.amazonaws.com
+        image_name: mastodon
+        image_tag: ${{ github.ref_name }}
+
+  deploy-staging:
+    name: staging
+    needs: build
+    uses: ./.github/workflows/deploy.yml
+    with:
+      app-name: mastodon
+      image-tag: ${{ github.ref_name }}
+      environment: staging
+      config-file-name: kubernetes/kubernetes/mastodon/values-dev.yaml
+    secrets:
+      ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
+      SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

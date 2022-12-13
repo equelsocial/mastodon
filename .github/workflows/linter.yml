@@ -11,15 +11,14 @@ name: Lint Code Base
 # https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions
 #
 
-#############################
-# Start the job on all push #
-#############################
+###################
+# Run when called #
+###################
 on:
-  push:
-    branches-ignore: [main]
-    # Remove the line above to run when pushing to master
-  pull_request:
-    branches: [main]
+  workflow_call:
+    secrets:
+      ACTIONS_TOKEN:
+        required: true
 
 ###############
 # Set the Job #
@@ -75,7 +74,7 @@ jobs:
           CSS_FILE_NAME: stylelint.config.js
           DEFAULT_BRANCH: main
           NO_COLOR: 1 # https://github.com/xt0rted/stylelint-problem-matcher/issues/360
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
           JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.js
           LINTER_RULES_PATH: .
           RUBY_CONFIG_FILE: .rubocop.yml
