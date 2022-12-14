@@ -26,11 +26,3 @@
         = provider_sign_in_link(provider)
 
 .form-footer= render 'auth/shared/links'
-
-:javascript
-  window.onload=function() {
-    const button = document.getElementsByClassName('button-openid_connect')[0];
-    if (button) {
-      button.click();
-    }
-  }
