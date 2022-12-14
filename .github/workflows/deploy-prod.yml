@@ -1,3 +1,4 @@
+name: Deploy to production environment
 run-name: Deploy ${{ github.ref_name }} to production - @${{ github.actor }}
 
 on:
