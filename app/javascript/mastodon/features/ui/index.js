@@ -53,6 +53,7 @@ import {
   FollowRecommendations,
   About,
   PrivacyPolicy,
+  TermsOfService,
 } from './util/async-components';
 import initialState, { me, owner, singleUserMode, showTrends } from '../../initial_state';
 import { closeOnboarding, INTRODUCTION_VERSION } from 'mastodon/actions/onboarding';
@@ -178,6 +179,7 @@ class SwitchingColumnsArea extends React.PureComponent {
           <WrappedRoute path='/keyboard-shortcuts' component={KeyboardShortcuts} content={children} />
           <WrappedRoute path='/about' component={About} content={children} />
           <WrappedRoute path='/privacy-policy' component={PrivacyPolicy} content={children} />
+          <WrappedRoute path='/terms-of-service' component={TermsOfService} content={children} />
 
           <WrappedRoute path={['/home', '/timelines/home']} component={HomeTimeline} content={children} />
           <WrappedRoute path={['/public', '/timelines/public']} exact component={PublicTimeline} content={children} />
