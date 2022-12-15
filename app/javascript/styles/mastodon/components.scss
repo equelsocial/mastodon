@@ -2256,40 +2256,49 @@ a.account__display-name {
 
 $ui-header-height: 55px;
 
-.ui__header {
-  display: none;
-  box-sizing: border-box;
-  height: $ui-header-height;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
+.ui__header__wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  width: 100%;
 
-  &__logo {
-    display: inline-flex;
-    padding: 15px;
-
-    .logo {
-      height: $ui-header-height - 30px;
-      width: auto;
-    }
-  }
-
-  &__links {
+  .ui__header {
     display: flex;
+    box-sizing: border-box;
+    height: $ui-header-height;
+    width: 100%;
+    max-width: $no-gap-breakpoint - 1px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    padding: 0 10px;
     overflow: hidden;
-
-    .button {
-      flex: 0 0 auto;
+  
+    &__logo {
+      display: inline-flex;
+      padding: 15px;
+  
+      .logo {
+        height: $ui-header-height - 30px;
+        width: auto;
+      }
     }
-
-    .button-tertiary {
-      flex-shrink: 1;
+  
+    &__links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 10px;
+      overflow: hidden;
+  
+      .button {
+        flex: 0 0 auto;
+      }
+  
+      .button-tertiary {
+        flex-shrink: 1;
+      }
     }
   }
 }
@@ -2574,12 +2583,6 @@ $ui-header-height: 55px;
     .column-link__icon {
       font-size: 18px;
     }
-  }
-
-  .ui__header {
-    display: flex;
-    background: $ui-base-color;
-    border-bottom: 1px solid lighten($ui-base-color, 8%);
   }
 
   .column-header,
