@@ -1,7 +1,6 @@
 import React from 'react';
 
-export default
-class TermsOfServiceDocument extends React.PureComponent {
+export default class TermsOfServiceDocument extends React.PureComponent {
   render() {
     return (
       <>
