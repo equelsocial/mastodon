@@ -1550,9 +1550,10 @@ en:
   tags:
     does_not_match_previous_name: does not match the previous name
   themes:
-    contrast: Mastodon (High contrast)
-    default: Mastodon (Dark)
+    default: Equel (Light)
     mastodon-light: Mastodon (Light)
+    mastodon-dark: Mastodon (Dark)
+    mastodon-contrast: Mastodon (High contrast)
   time:
     formats:
       default: "%b %d, %Y, %H:%M"
