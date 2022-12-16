@@ -298,7 +298,7 @@ code {
       margin-bottom: 10px;
       max-width: 100%;
       height: auto;
-      border-radius: 4px;
+      border-radius: 10px;
       background: url("images/void.png");
 
       &:last-child {
@@ -397,7 +397,7 @@ code {
     font-size: 16px;
     padding: 10px;
     border: 1px solid $dark-text-color;
-    border-radius: 4px;
+    border-radius: 10px;
   }
 
   input[type="text"],
@@ -417,7 +417,7 @@ code {
     resize: vertical;
     background: darken($ui-base-color, 10%);
     border: 1px solid darken($ui-base-color, 14%);
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 10px;
 
     &::placeholder {
@@ -502,7 +502,7 @@ code {
     display: block;
     width: 100%;
     border: 0;
-    border-radius: 4px;
+    border-radius: 10px;
     background: darken($ui-highlight-color, 2%);
     color: $primary-text-color;
     font-size: 18px;
@@ -569,7 +569,7 @@ code {
     resize: vertical;
     background: darken($ui-base-color, 10%) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14.933 18.467' height='19.698' width='15.929'><path d='M3.467 14.967l-3.393-3.5H14.86l-3.392 3.5c-1.866 1.925-3.666 3.5-4 3.5-.335 0-2.135-1.575-4-3.5zm.266-11.234L7.467 0 11.2 3.733l3.733 3.734H0l3.733-3.734z' fill='#{hex-color(lighten($ui-base-color, 12%))}'/></svg>") no-repeat right 8px center / auto 16px;
     border: 1px solid darken($ui-base-color, 14%);
-    border-radius: 4px;
+    border-radius: 10px;
     padding-left: 10px;
     padding-right: 30px;
     height: 41px;
@@ -623,7 +623,7 @@ code {
 .flash-message {
   background: lighten($ui-base-color, 8%);
   color: $darker-text-color;
-  border-radius: 4px;
+  border-radius: 10px;
   padding: 15px 10px;
   margin-bottom: 30px;
   text-align: center;
@@ -739,15 +739,15 @@ code {
     border-top-width: 0;
 
     &:first-child {
-      border-radius: 4px 4px 0 0;
+      border-radius: 10px 10px 0 0;
       border-top-width: 1px;
     }
 
     &:last-child {
-      border-radius: 0 0 4px 4px;
+      border-radius: 0 0 10px 10px;
 
       &:first-child {
-        border-radius: 4px;
+        border-radius: 10px;
       }
     }
   }
@@ -831,7 +831,7 @@ code {
 
   .permissions-list {
     border: 1px solid $ui-base-color;
-    border-radius: 4px;
+    border-radius: 10px;
     background: darken($ui-base-color, 4%);
     margin-bottom: 30px;
   }
@@ -888,7 +888,7 @@ code {
     color: $primary-text-color;
     text-shadow: 1px 1px 0 rgba($base-shadow-color, 0.3);
     box-shadow: 0 2px 6px rgba($base-shadow-color, 0.4);
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 10px;
     margin-bottom: 15px;
 
@@ -983,7 +983,7 @@ code {
 .input-copy {
   background: darken($ui-base-color, 10%);
   border: 1px solid darken($ui-base-color, 14%);
-  border-radius: 4px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   padding-right: 4px;
