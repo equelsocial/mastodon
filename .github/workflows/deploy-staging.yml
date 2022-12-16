@@ -6,15 +6,15 @@ on:
     tags: v*
 
 jobs:
-  # linter:
-  #   uses: ./.github/workflows/linter.yml
-  #   secrets: inherit
+  linter:
+    uses: ./.github/workflows/linter.yml
+    secrets: inherit
 
-  # check-i18n:
-  #   uses: ./.github/workflows/check-i18n.yml
+  check-i18n:
+    uses: ./.github/workflows/check-i18n.yml
 
   build:
-    # needs: [linter, check-i18n]
+    needs: [linter, check-i18n]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
