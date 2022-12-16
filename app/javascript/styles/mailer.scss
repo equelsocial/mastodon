@@ -254,7 +254,7 @@ h5 {
 .input {
   td {
     background: darken($ui-base-color, 8%);
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 16px;
     line-height: 20px;
     mso-line-height-rule: exactly;
@@ -357,7 +357,7 @@ h5 {
   td {
     line-height: 20px;
     mso-line-height-rule: exactly;
-    border-radius: 4px;
+    border-radius: 10px;
     text-align: center;
     font-weight: 500;
     font-size: 17px;
@@ -381,7 +381,7 @@ h5 {
 
   &.button-small {
     td {
-      border-radius: 4px;
+      border-radius: 10px;
       font-size: 14px;
       padding: 8px 16px;
 
@@ -472,7 +472,7 @@ h5 {
 
   &--highlighted {
     border: 1px solid lighten($ui-base-color, 8%);
-    border-radius: 4px;
+    border-radius: 10px;
     padding-bottom: 16px;
     margin-bottom: 16px;
   }
@@ -497,7 +497,7 @@ h5 {
     img {
       width: 48px;
       height: 48px;
-      border-radius: 4px;
+      border-radius: 10px;
     }
   }
 

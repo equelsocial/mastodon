@@ -47,11 +47,11 @@ class Header extends React.PureComponent {
 
       content = (
         <>
-          <a href='/auth/sign_in' className='button button-with-icon'>
+          <a href='/auth/sign_in' className='button button-secondary button-with-icon'>
             <Icon id='linkedin' fixedWidth aria-hidden='true' />
             <FormattedMessage id='sign_in_banner.sign_in' defaultMessage='Log in' />
           </a>
-          <a href='/auth/sign_in' className='button button-tertiary button-with-icon'>
+          <a href='/auth/sign_in' className='button button button-with-icon'>
             <Icon id='linkedin' fixedWidth aria-hidden='true' />
             {mobile
               ? <FormattedMessage id='sign_in_banner.create_account_short' defaultMessage='Join' />
