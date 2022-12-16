@@ -3976,12 +3976,16 @@
         "id": "compose_form.publish_form"
       },
       {
-        "defaultMessage": "Sign in",
+        "defaultMessage": "Log in",
         "id": "sign_in_banner.sign_in"
       },
       {
-        "defaultMessage": "Create account",
+        "defaultMessage": "Join now",
         "id": "sign_in_banner.create_account"
+      },
+      {
+        "defaultMessage": "Join",
+        "id": "sign_in_banner.create_account_short"
       }
     ],
     "path": "app/javascript/mastodon/features/ui/components/header.json"
