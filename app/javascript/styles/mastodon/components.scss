@@ -2258,6 +2258,9 @@ $ui-header-height: 55px;
 
 .ui__header__wrapper {
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 2;
   justify-content: center;
   background-color: white;
   width: 100%;
@@ -2268,34 +2271,31 @@ $ui-header-height: 55px;
     height: $ui-header-height;
     width: 100%;
     max-width: $no-gap-breakpoint - 1px;
-    position: sticky;
-    top: 0;
-    z-index: 2;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-  
+
     &__logo {
       display: inline-flex;
       padding: 12px;
-  
+
       .logo {
         height: $ui-header-height - 24px;
         width: auto;
       }
     }
-  
+
     &__links {
       display: flex;
       align-items: center;
       gap: 10px;
       padding: 0 10px;
       overflow: hidden;
-  
+
       .button {
         flex: 0 0 auto;
       }
-  
+
       .button-tertiary {
         flex-shrink: 1;
       }
