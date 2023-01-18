@@ -24,3 +24,5 @@
     .actions
       - resource_class.omniauth_providers.each do |provider|
         = provider_sign_in_link(provider)
+
+    %p= t('auth.thanks_for_verifying')

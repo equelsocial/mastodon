@@ -963,6 +963,12 @@ code {
   .button {
     display: block;
   }
+
+  p {
+    text-align: center;
+    margin-top: 32px;
+    color: $dark-text-color;
+  }
 }
 
 .scope-danger {
