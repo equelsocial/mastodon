@@ -949,7 +949,6 @@ en:
     link_to_otp: Enter a two-factor code from your phone or a recovery code
     link_to_webauth: Use your security key device
     log_in_with: Verify your identity with LinkedIn
-    thanks_for_verifying: Thank you for helping us make Equel a safe space.
     login: Log in
     logout: Logout
     migrate_account: Move to a different account
@@ -982,6 +981,7 @@ en:
       pending: Your application is pending review by our staff. This may take some time. You will receive an e-mail if your application is approved.
       redirecting_to: Your account is inactive because it is currently redirecting to %{acct}.
       view_strikes: View past strikes against your account
+    thanks_for_verifying: Thank you for helping us make Equel a safe space.
     too_fast: Form submitted too fast, try again.
     use_security_key: Use security key
   authorize_follow:
