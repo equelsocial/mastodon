@@ -492,6 +492,8 @@ html {
 }
 
 .button.button-tertiary {
+  color: $highlight-text-color;
+
   &:hover,
   &:focus,
   &:active {
