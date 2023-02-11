@@ -1,19 +1,38 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { FormattedMessage } from 'react-intl';
-import Icon from 'mastodon/components/icon';
+import { useDispatch } from 'react-redux';
+import { registrationsOpen } from 'mastodon/initial_state';
+import { openModal } from 'mastodon/actions/modal';
 
 const SignInBanner = () => {
-  return (
-    <div className='sign-in-banner'>
-      <p><FormattedMessage id='sign_in_banner.text' defaultMessage='For a safe community, Equel members must use LinkedIn to sign in with their real identities.' /></p>
-      <a href='/auth/sign_in' className='button button-secondary button--block button-with-icon'>
-        <Icon id="linkedin" fixedWidth aria-hidden='true' />
-        <FormattedMessage id='sign_in_banner.sign_in' defaultMessage='Log in' />
-      </a>
-      <a href='/auth/sign_in' className='button button--block button-with-icon'>
-        <Icon id="linkedin" fixedWidth aria-hidden='true' />
+  const dispatch = useDispatch();
+
+  const openClosedRegistrationsModal = useCallback(
+    () => dispatch(openModal('CLOSED_REGISTRATIONS')),
+    [dispatch],
+  );
+
+  let signupButton;
+
+  if (registrationsOpen) {
+    signupButton = (
+      <a href='/auth/sign_up' className='button button--block'>
         <FormattedMessage id='sign_in_banner.create_account' defaultMessage='Join now' />
       </a>
+    );
+  } else {
+    signupButton = (
+      <button className='button button--block' onClick={openClosedRegistrationsModal}>
+        <FormattedMessage id='sign_in_banner.create_account' defaultMessage='Join now' />
+      </button>
+    );
+  }
+
+  return (
+    <div className='sign-in-banner'>
+      <p><FormattedMessage id='sign_in_banner.text' defaultMessage='Log in to follow profiles or hashtags, favourite, share and reply to posts, or interact from your account on a different server.' /></p>
+      <a href='/auth/sign_in' className='button button-secondary button--block'><FormattedMessage id='sign_in_banner.sign_in' defaultMessage='Log in' /></a>
+      {signupButton}
     </div>
   );
 };
