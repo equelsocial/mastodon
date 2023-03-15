@@ -30,11 +30,6 @@ eu:
         extra: Ez baduzu e-mail helbidea aldatu, agian baten bat zure kontura sartzea lortu du. Aldatu zure pasahitza berehala edo jarri zerbitzariko administratzailearekin kontaktuan zure kontura sartzerik ez baduzu.
         subject: 'Mastodon: E-mail helbidea aldatuta'
         title: E-mail helbide berria
-      password_change:
-        explanation: Zure kontuaren pasahitza aldatu da.
-        extra: Ez baduzu pasahitza aldatu, agian baten bat zure kontura sartzea lortu du. Aldatu zure pasahitza berehala edo jarri zerbitzariko administratzailearekin kontaktuan zure kontura sartzerik ez baduzu.
-        subject: 'Mastodon: Pasahitza aldatuta'
-        title: Pasahitza aldatuta
       reconfirmation_instructions:
         explanation: Baieztatu helbide berria zure e-maila aldatzeko.
         extra: Aldaketa hau ez baduzu zuk eskatu, ezikusi e-mail hau. Mastodon kontuaren e-mail helbidea ez da aldatuko goiko estekan sartzen ez bazara.

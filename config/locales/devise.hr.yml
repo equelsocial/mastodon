@@ -14,8 +14,6 @@ hr:
       email_changed:
         subject: 'Mastodon: adresa e-pošte je promijenjena'
         title: Nova adresa e-pošte
-      password_change:
-        subject: 'Mastodon: lozinka je promijenjena'
       reset_password_instructions:
         subject: 'Mastodon: upute za ponovno postavljanje lozinke'
         title: Ponovno postavljanje lozinke

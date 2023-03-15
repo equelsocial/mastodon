@@ -30,11 +30,6 @@ sco:
         extra: Gin ye didnae chynge yer email, it's mibbie the case thit somebody haes got access tae yer accoont. Please chynge yer passwird richt noo or get in touch wi the server admin if ye'r snibbed oot yer accoont.
         subject: 'Mastodon: Email chynged'
         title: New email address
-      password_change:
-        explanation: The passwird fir yer accoont haes been chynged.
-        extra: Gin ye didnae chynge yer passwird, it's mibbie the case thit somebody haes got access tae yer accoont. Please chynge yer passwird richt noo or get in touch wi the server admin if ye'r snibbed oot yer accoont.
-        subject: 'Mastodon: Passwird chynged'
-        title: Passwird chynged
       reconfirmation_instructions:
         explanation: Mak siccar the new address fir tae chynge yer email.
         extra: Gin this chynge wisnae stertit bi yersel, please dingie this email. The email address fir the Mastodon accoont wullnae chynge tae ye chap the link abuin.

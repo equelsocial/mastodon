@@ -30,11 +30,6 @@ co:
         extra: S’ellu un era micca voi ch’avete cambiatu u vostru email, qualch’un’altru hà accessu à u vostru contu. Duvete cambià a vostra chjave d’accessu o cuntattà l’amministratore di u servore s’ellu ùn hè più pussibule di cunnettavi.
         subject: 'Mastodon: Email cambiatu'
         title: Novu indirizzu email
-      password_change:
-        explanation: A chjave d’accessu per u vostru contu hè stata cambiata.
-        extra: S’ellu un era micca voi ch’avete cambiatu a vostra chjave d’accessu, qualch’un’altru hà accessu à u vostru contu. Duvete cambià a vostra chjave d’accessu o cuntattà l’amministratore di u servore s’ellu ùn hè più pussibule di cunnettavi.
-        subject: 'Mastodon: Chjave d’accessu cambiata'
-        title: Chjave cambiata
       reconfirmation_instructions:
         explanation: Cunfirmà u novu indirizzu per cambià l’email.
         extra: S’ellu ùn era micca voi, ignurate stu missaghju. L’email ùn cambiarà micca s’è voi ùn cliccate micca u ligame.

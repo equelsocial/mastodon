@@ -30,11 +30,6 @@ nl:
         extra: Wanneer jij jouw e-mailadres niet hebt gewijzigd, heeft iemand zich waarschijnlijk toegang tot jouw account verschaft. Verander onmiddellijk jouw wachtwoord of neem contact op met de beheerder van jouw Mastodonserver wanneer je niet meer kunt inloggen.
         subject: 'Mastodon: E-mailadres is veranderd'
         title: Nieuw e-mailadres
-      password_change:
-        explanation: Het wachtwoord van dit account is gewijzigd.
-        extra: Wanneer jij jouw wachtwoord niet hebt gewijzigd, heeft iemand zich waarschijnlijk toegang tot jouw account verschaft. Verander onmiddellijk jouw wachtwoord of neem contact op met de beheerder van jouw Mastodonserver wanneer je niet meer kunt inloggen.
-        subject: 'Mastodon: Wachtwoord veranderd'
-        title: Wachtwoord gewijzigd
       reconfirmation_instructions:
         explanation: Bevestig jouw nieuw e-mailadres om deze te wijzigen.
         extra: Wanneer jij deze wijziging niet hebt uitgevoerd, mag je deze e-mail negeren. Het e-mailadres van jouw Mastodonaccount wordt pas daadwerkelijk gewijzigd totdat je de link hierboven aanklikt.

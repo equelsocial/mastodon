@@ -30,11 +30,6 @@ sq:
         extra: Nëse email-in tuaj s’e ndryshuat ju, gjasat janë që dikush tjetër ka arritur të hyjë në llogarinë tuaj. Nëse jeni kyçur jashtë llogarisë tuaj, ju lutemi, ndryshoni menjëherë fjalëkalimin tuaj ose lidhuni me përgjegjësin e shërbyesit.
         subject: 'Mastodon: U ndryshua email'
         title: Adresë email e re
-      password_change:
-        explanation: Fjalëkalimi për llogarinë tuaj u ndryshua.
-        extra: Nëse fjalëkalimin tuaj s’e ndryshuat ju, gjasat janë që dikush tjetër ka arritur të hyjë në llogarinë tuaj. Ju lutemi, ndryshoni menjëherë fjalëkalimin tuaj ose lidhuni me përgjegjësin e shërbyesit, nëse jeni kyçur jashtë llogarisë tuaj.
-        subject: 'Mastodon: U ndryshua fjalëkalim'
-        title: Fjalëkalimi u ndryshua
       reconfirmation_instructions:
         explanation: Që të ndryshohet email-i juaj, ripohoni adresën e re.
         extra: Nëse ky ndryshim s’qe filluar prej jush, ju lutemi, shpërfilleni këtë email. Adresa email për llogarinë Mastodon s’do të ndryshojë, para se të hyni në lidhjen më sipër.

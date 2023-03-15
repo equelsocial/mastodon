@@ -30,11 +30,6 @@ fi:
         extra: Jos et vaihtanut sähköpostiosoitettasi, joku muu on todennäköisesti päässyt käyttämään tiliäsi. Vaihda salasanasi viipymättä. Jos et pääse kirjautumaan tilillesi, ota yhteyttä instanssin ylläpitäjään.
         subject: 'Mastodon: Sähköpostiosoite vaihdettu'
         title: Uusi sähköpostiosoite
-      password_change:
-        explanation: Tilisi salasana on vaihdettu.
-        extra: Jos et vaihtanut salasanaasi, joku muu on todennäköisesti päässyt käyttämään tiliäsi. Vaihda salasanasi viipymättä. Jos et pääse kirjautumaan tilillesi, ota yhteyttä instanssin ylläpitäjään.
-        subject: 'Mastodon: Salasana vaihdettu'
-        title: Salasana vaihdettu
       reconfirmation_instructions:
         explanation: Vahvista uusi sähköpostiosoite, niin muutos astuu voimaan.
         extra: Jos et tehnyt muutosta itse, voit jättää tämän viestin huomiotta. Mastodon-tilin sähköpostiosoitetta ei vaihdeta, ennen kuin klikkaat yllä olevaa linkkiä.

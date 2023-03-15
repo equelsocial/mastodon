@@ -30,11 +30,6 @@ gd:
         extra: Mur an do dh’atharraich thu fhèin am post-d agad, tha deagh theans gun d’ fhuair cuideigin eile grèim air a’ chunntas agad. Atharraich am facal-faire agad sa bhad no cuir fios gu rianaire an fhrithealaiche ma chaidh do ghlasadh a-mach às a’ chunntas agad.
         subject: 'Mastodon: Chaidh am post-d atharrachadh'
         title: Seòladh puist-d ùr
-      password_change:
-        explanation: Chaidh facal-faire a’ chunntais agad atharrachadh.
-        extra: Mur an do dh’atharraich thu fhèin am facal-faire agad, tha deagh theans gun d’ fhuair cuideigin eile grèim air a’ chunntas agad. Atharraich am facal-faire agad sa bhad no cuir fios gu rianaire an fhrithealaiche ma chaidh do ghlasadh a-mach às a’ chunntas agad.
-        subject: 'Mastodon: Chaidh am facal-faire atharrachadh'
-        title: Chaidh am facal-faire atharrachadh
       reconfirmation_instructions:
         explanation: Dearbh an seòladh ùr airson am post-d agad atharrachadh.
         extra: Mura rinn thu fhèin an t-atharrachadh seo, leig seachad am post-d seo. Chan atharraich seòladh puist-d a’ chunntais Mastodon agad gus am briog thu air a’ cheangal gu h-àrd.

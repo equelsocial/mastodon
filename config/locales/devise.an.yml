@@ -30,11 +30,6 @@ an:
         extra: Si vusté no ha cambiau lo suyo correu electronico, ye probable que belún haiga aconseguiu acceso a la suya cuenta. Per favor cambie la suya clau immediatament u contacte a l'administrador d'a instancia si vusté no puede iniciar sesión.
         subject: 'Mastodon: Correu electronico cambiau'
         title: Nueva adreza de correu electronico
-      password_change:
-        explanation: La clau d'a suya cuenta a estau cambiada.
-        extra: Si vusté no a cambiau la suya clau. ye probable que belún a aconseguiu acceso a la suya cuenta. Per favor cambie la suya clau immediatament u contacte a l'administrador d'a instancia si vusté esta blocau d'a suya cuenta.
-        subject: 'Mastodon: Clau cambiada'
-        title: Clau cambiada
       reconfirmation_instructions:
         explanation: Confirme la nueva adreza pa cambiar la suya coreo electronico.
         extra: Si no iniciés este cambio, per favor ignora este correu. Esta adreza de correu pa la cuenta de Mastodon no cambiará dica que accedas a lo vinculo alto.

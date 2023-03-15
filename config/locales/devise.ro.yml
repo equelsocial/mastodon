@@ -30,11 +30,6 @@ ro:
         extra: Dacă nu v-ați schimbat adresa de e-mail, probabil că cineva a obținut acces la contul dvs. Te rugăm să îți schimbi parola imediat sau să contactezi administratorul serverului dacă nu ai acces la contul tău.
         subject: E-mail schimbat
         title: Noua adresa de e-mail
-      password_change:
-        explanation: Parola contului tău a fost schimbată.
-        extra: Dacă nu v-ați schimbat parola, este posibil ca cineva să fi obținut acces la contul dvs. Te rugăm să îți schimbi parola imediat sau să contactezi administratorul serverului dacă nu ai acces la contul tău.
-        subject: Parolă schimbată
-        title: Parolă schimbată
       reconfirmation_instructions:
         explanation: Confirmă noua adresă pentru a schimba adresa de e-mail.
         extra: Dacă această modificare nu a fost inițiată de dvs., vă rugăm să ignorați acest e-mail. Adresa de e-mail pentru contul Mastodon nu se va schimba până când nu accesați link-ul de mai sus.

@@ -30,11 +30,6 @@ es:
         extra: Si usted no ha cambiado su correo electrónico, es probable que alguien haya conseguido acceso a su cuenta. Por favor cambie su contraseña inmediatamente o contacte al administrador de la instancia si usted no puede iniciar sesión.
         subject: 'Mastodon: Correo electrónico cambiado'
         title: Nueva dirección de correo electrónico
-      password_change:
-        explanation: La contraseña de su cuenta a sido cambiada.
-        extra: Si usted no a cambiado su contraseña. es probable que alguien a conseguido acceso a su cuenta. Por favor cambie su contraseña inmediatamente o contacte a el administrador de la instancia si usted esta bloqueado de su cuenta.
-        subject: 'Mastodon: Contraseña cambiada'
-        title: Contraseña cambiada
       reconfirmation_instructions:
         explanation: Confirme la nueva dirección para cambiar su coreo electrónico.
         extra: Si no iniciaste este cambio, por favor ignora este correo. Esta dirección de correo para la cuenta de Mastodon no cambiará hasta que accedas al vinculo arriba.

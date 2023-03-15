@@ -30,11 +30,6 @@ pt-PT:
         extra: Se não alterou o seu e-mail, é possível que alguém tenha conseguido aceder à sua conta. Por favor altere a sua palavra-passe imediatamente ou entra em contacto com um administrador da instância se tiver ficado sem acesso à sua conta.
         subject: 'Mastodon: E-mail alterado'
         title: Novo endereço de e-mail
-      password_change:
-        explanation: A palavra-passe da tua conta foi alterada.
-        extra: Se não alterou a sua palavra-passe, é possível que alguém tenha conseguido aceder à sua conta. Por favor altere a sua palavra-passe imediatamente ou entre em contacto com um administrador da instância se tiver ficado sem acesso à sua conta.
-        subject: 'Mastodon: Nova palavra-passe'
-        title: Palavra-passe alterada
       reconfirmation_instructions:
         explanation: Confirme o seu novo endereço para alterar o e-mail.
         extra: Se esta mudança não foi iniciada por si, por favor ignore este e-mail. O endereço de e-mail para a sua conta do Mastodon não irá mudar enquanto não aceder ao link acima.

@@ -30,11 +30,6 @@ is:
         extra: Ef það varst ekki þú sem breyttir tölvupóstfanginu þínu, þá er líklegt að einhver hafi komist inn í notandaaðganginn þinn. Skiptu núna strax um lykilorð eða hafðu samband við kerfisstjóra netþjónsins ef þú hefur verið læst/ur úti af notandaaðgangnum þínum.
         subject: 'Mastodon: Tölvupóstfang breyttist'
         title: Nýtt tölvupóstfang
-      password_change:
-        explanation: Lykilorðinu á notandaaðgangnum þínum hefur verið breytt.
-        extra: Ef það varst ekki þú sem breyttir lykilorðinu þínu, þá er líklegt að einhver hafi komist inn í notandaaðganginn þinn. Skiptu núna strax um lykilorð eða hafðu samband við kerfisstjóra netþjónsins ef þú hefur verið læst/ur úti af notandaaðgangnum þínum.
-        subject: 'Mastodon: Lykilorð breyttist'
-        title: Lykilorð breyttist
       reconfirmation_instructions:
         explanation: Staðfestu nýja vistfangið til að skipta um tölvupóstfang.
         extra: Ef það varst ekki þú sem baðst um þessa breytingu, geturðu hunsað þennan tölvupóst. Tölvupóstfangið fyrir Mastodon-aðganginn mun ekki breytast fyrr en þú hefur fylgt tenglinum hér fyrir ofan.

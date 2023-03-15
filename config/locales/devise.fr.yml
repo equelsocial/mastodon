@@ -30,11 +30,6 @@ fr:
         extra: Si vous n’avez pas changé votre adresse courriel, il est probable que quelqu’un ait eu accès à votre compte. Veuillez changer votre mot de passe immédiatement ou contacter l’administrateur·rice du serveur si vous êtes bloqué·e hors de votre compte.
         subject: 'Mastodon : Courriel modifié'
         title: Nouvelle adresse courriel
-      password_change:
-        explanation: Le mot de passe de votre compte a été changé.
-        extra: Si vous n’avez pas changé votre mot de passe, il est probable que quelqu’un ait eu accès à votre compte. Veuillez changer votre mot de passe immédiatement ou contacter l’administrateur·rice du serveur si vous êtes bloqué·e hors de votre compte.
-        subject: 'Mastodon : Votre mot de passe a été modifié avec succès'
-        title: Mot de passe modifié
       reconfirmation_instructions:
         explanation: Confirmez la nouvelle adresse pour changer votre courriel.
         extra: Si ce changement n’a pas été initié par vous, veuillez ignorer ce courriel. L’adresse courriel du compte Mastodon ne changera pas tant que vous n’aurez pas cliqué sur le lien ci-dessus.

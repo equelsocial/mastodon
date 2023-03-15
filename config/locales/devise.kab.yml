@@ -30,11 +30,6 @@ kab:
         extra: Ma mačči d kečč i ibeddlen tansa imayl, ihi yezmer d alebɛaḍ i ikecmen γer umiḍan-ik. Ttxil-k beddel awal-ik uffir tura neγ siwel i unedbal n uqeddac ma tḥesleḍ berra n umiḍan-ik.
         subject: 'Maṣṭudun: Imayl-ik yettubeddel'
         title: Tansa imayl tamaynut
-      password_change:
-        explanation: Awal uffir n umiḍan-ik yettubeddel.
-        extra: Ma mačči d kečč i ibeddlen awal uffir, ihi yezmer d alebɛaḍ i ikecmen γer umiḍan-ik. Ttxil-k beddel awal-ik uffir tura neγ siwel i unedbal n uqeddac ma tḥesleḍ berra n umiḍan-ik.
-        subject: 'Maṣṭudun: Yettubeddel wawal-ik uffir'
-        title: Awal uffir yettubeddel
       reconfirmation_instructions:
         explanation: Sentem tansa imayl tamaynut akken ad tbeddleḍ imayl-inek.
         extra: Ma yella mačči d kečč·kem i yebdan aya, ttxil suref i yimayl-a. Tansa n imayl n Mastodon ur tettbeddil ara skud ur tkecmeḍ ara ɣer useɣwen-nni ufella.

@@ -29,11 +29,6 @@ sk:
         extra: Ak si nezmenil/a svoj email, je pravdepodobné, že niekto iný získal prístup k tvojmu účtu. Naliehavo preto prosím zmeň svoje heslo, alebo kontaktuj administrátora tohto serveru, pokiaľ si vymknutý/á zo svojho účtu.
         subject: 'Mastodon: Emailová adresa bola zmenená'
         title: Nová emailová adresa
-      password_change:
-        explanation: Heslo k tvojmu účtu bolo zmenené.
-        extra: Ak si heslo nezmenil/a, je pravdepodobné, že niekto iný získal prístup k tvojmu účtu. Naliehavo preto prosím zmeň svoje heslo, alebo kontaktuj administrátora tohto serveru, pokiaľ si vymknutý/á zo svojho účtu.
-        subject: 'Mastodon: Heslo bolo zmenené'
-        title: Heslo bolo zmenené
       reconfirmation_instructions:
         explanation: Potvrď novú emailovú adresu na ktorú chceš zmeniť svoj email.
         extra: Pokiaľ si túto akciu nevyžiadal/a, prosím ignoruj tento email. Emailová adresa pre tvoj Mastodon účet totiž nebude zmenená pokiaľ nepostúpiš na adresu uvedenú vyššie.

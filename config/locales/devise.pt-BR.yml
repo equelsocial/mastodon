@@ -30,11 +30,6 @@ pt-BR:
         extra: Se você não alterou seu e-mail, é possível que alguém tenha ganhado acesso à sua conta. Altere sua senha imediatamente ou entre em contato com a administração da instância se você está sem acesso à ela.
         subject: 'Mastodon: Endereço de e-mail alterado'
         title: Novo endereço de e-mail
-      password_change:
-        explanation: A senha da sua conta foi alterada.
-        extra: Se você não alterou sua senha, é possível que alguém tenha ganhado acesso à sua conta. Altere sua senha imediatamente ou entre em contato com a administração da instância se você está sem acesso à ela.
-        subject: 'Mastodon: Senha alterada'
-        title: Senha alterada
       reconfirmation_instructions:
         explanation: Confirme seu novo endereço para alterar seu e-mail.
         extra: Se essa alteração não foi feita por você, ignore este e-mail. O endereço de e-mail para essa conta do Mastodon não será alterado até que você entre no link acima.

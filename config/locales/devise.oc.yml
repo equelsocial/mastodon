@@ -30,11 +30,6 @@ oc:
         extra: S’avètz pas demandat aqueste cambiament d’adreça, poiriá arribar que qualqu’un mai aguèsse agut accès a vòstre compte. Mercés de cambiar sulpic vòstre senhal o de contactar vòstre administrator de servidor se l’accès a vòstre compte vos es barrat.
         subject: 'Mastodon : corrièl cambiat'
         title: Nòva adreça de corrièl
-      password_change:
-        explanation: Lo senhal per vòstre compte a cambiat.
-        extra: S’avètz pas demandat aqueste cambiament de senhal, poiriá arribar que qualqu’un mai aguèsse agut accès a vòstre compte. Mercés de cambiar sulpic vòstre senhal o de contactar vòstre administrator de servidor se l’accès a vòstre compte vos es barrat.
-        subject: Mastodon : senhal cambiat
-        title: Senhal cambiat
       reconfirmation_instructions:
         explanation: Confirmar la nòva adreça per cambiar lo corrièl.
         extra: S’avètz pas res demandat, fasquètz pas cas a aqueste corrièl. Vòstre corrièl per Mastodon cambiarà pas se clicatz pas lo ligam dessús.

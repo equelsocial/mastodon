@@ -30,11 +30,6 @@ zh-TW:
         extra: 若您未變更電子郵件，那麼很有可能是某人取得了您帳號的存取權限。請立刻變更密碼，或當帳號被鎖定時，請聯絡伺服器的管理員。
         subject: Mastodon：已變更電子郵件
         title: 新電子郵件地址
-      password_change:
-        explanation: 您帳號的密碼已變更。
-        extra: 若您未變更密碼，那麼很有可能是某人取得了您帳號的存取權限。請立刻變更密碼，或若帳號被鎖定時，請聯絡伺服器的管理員。
-        subject: Mastodon：已變更密碼
-        title: 密碼已變更
       reconfirmation_instructions:
         explanation: 請確認新的電子郵件地址以變更。
         extra: 若此次變更不是由您起始的，請忽略此信件。Mastodon 帳號的電子郵件地址在您存取上面的連結前不會變更。

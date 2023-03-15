@@ -30,11 +30,6 @@ pl:
         extra: Jeżeli nie próbowałeś(-aś) zmienić adresu e-mail, prawdopodobnie ktoś uzyskał dostęp do Twojego konta. Zmień natychmiastowo hasło lub skontaktuj się z administratorem serwera, jeżeli nie masz dostępu do konta.
         subject: 'Mastodon: Zmieniono adres e-mail'
         title: Nowy adres e-mail
-      password_change:
-        explanation: Hasło do Twojego konta zostało zmienione.
-        extra: Jeżeli nie zmieniałeś(-aś) hasła, prawdopodobnie ktoś uzyskał dostęp do Twojego konta. Zmień hasło natychmiastowo lub skontaktuj się z administratorem serwera, jeżeli nie masz dostępu do konta.
-        subject: 'Mastodon: Zmieniono hasło'
-        title: Zmieniono hasło
       reconfirmation_instructions:
         explanation: Potwierdź nowy adres aby zmienić e-mail.
         extra: Jeżeli nie próbowałeś(-aś) zmienić e-maila, zignoruj tą wiadomość. Adres e-mail przypisany do konta Mastodona nie ulegnie zmianie, jeżeli nie użyjesz powyższego odnośniku.

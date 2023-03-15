@@ -32,11 +32,6 @@ ca:
         extra: Si no has canviat el teu correu-e és probable que algú hagi accedit al teu compte. Si us plau, canvia la contrasenya immediatament o posa't en contacte amb l'administrador del servidor si no pots accedir al teu compte.
         subject: 'Mastodon: s''ha canviat l''adreça-e'
         title: Nova adreça-e
-      password_change:
-        explanation: S'ha canviat la contrasenya del teu compte.
-        extra: Si no has canviat la teva contrasenya, és probable que algú hagi accedit al teu compte. Si us plau, canvia-la immediatament o posa't en contacte amb l'administrador del servidor si no pots accedir al teu compte.
-        subject: 'Mastodon: contrasenya canviada'
-        title: Contrasenya canviada
       reconfirmation_instructions:
         explanation: Confirma la nova adreça per canviar el teu correu-e.
         extra: Si no has iniciat aquest canvi, ignora aquest correu-e. L'adreça de correu-e del compte de Mastodon no canviarà fins que no accedeixis a l'enllaç que hi ha a dalt.

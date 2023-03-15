@@ -30,11 +30,6 @@
         extra: Hvis du ikke endret e-postadressen din, er det sannsynlig at noen har fått tilgang til kontoen din. Vennligst endre passordet ditt umiddelbart eller kontakt instansens administrator dersom du er låst ute fra kontoen din.
         subject: 'Mastodon: E-postadresse endret'
         title: Ny e-postadresse
-      password_change:
-        explanation: Passordet til kontoen din har blitt endret.
-        extra: Hvis du ikke endret passordet ditt, er det sannsynlig at noen har fått tilgang til kontoen din. Vennligst endre passordet ditt umiddelbart eller kontakt instansens administrator dersom du er utestengt fra kontoen din.
-        subject: 'Mastodon: Passord endret'
-        title: Passord endret
       reconfirmation_instructions:
         explanation: Bekreft den nye e-postadressen for å endre e-post.
         extra: Se bort fra denne e-posten dersom du ikke gjorde denne endringen. E-postadressen for Mastodon-kontoen blir ikke endret før du trykker på lenken over.

@@ -30,11 +30,6 @@ sl:
         extra: Če niste spremenili e-pošte, je verjetno, da je nekdo pridobil dostop do vašega računa. Prosimo, zamenjajte geslo takoj ali se obrnite na skbrnika, če ste izklopljeni iz svojega računa.
         subject: 'Mastodon: e-poštni naslov je spremenjen'
         title: Novi e-poštni naslov
-      password_change:
-        explanation: Geslo za vaš račun je bilo spremenjeno.
-        extra: Če niste spremenili gesla, je verjetno, da je nekdo pridobil dostop do vašega računa. Prosimo, zamenjajte geslo takoj. Če ste blokirani iz svojega računa, se obrnite na skrbnika strežnika.
-        subject: 'Mastodon: geslo je spremenjeno'
-        title: Geslo je spremenjeno
       reconfirmation_instructions:
         explanation: Potrdite novi naslov, da spremenite svoj e-poštni naslov.
         extra: Če te spremembe niste sprožili, prezrite to e-poštno sporočilo. E-poštni naslov za račun Mastodon se ne bo spremenil, dokler ne kliknete zgornje povezave.

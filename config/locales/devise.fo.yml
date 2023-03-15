@@ -30,11 +30,6 @@ fo:
         extra: Um tú ikki hevur skift teldupostin, er sannlíkt at onkur annar hevur fingið atgongd til tína kontu. Vinarliga skift loyniorðið beinanvegin. Set teg í samband við fyrisitaran, um tú ikki sleppur inn á tína kontu.
         subject: 'Mastodon: Teldupostur broyttur'
         title: Nýggjur eldupostur
-      password_change:
-        explanation: Loyniorðið til kontoina hjá tær er broytt.
-        extra: Um tú ikki hevur skift loyniorðið, er sannlíkt at onkur annar hevur fingið atgongd til tína kontu. Vinarliga skift loyniorðið beinanvegin. Um tú ikki sleppur inn á tína kontu, hav samband við fyrisitarin.
-        subject: 'Mastodon: Loyniorð broytt'
-        title: Loyniorðið er broytt
       reconfirmation_instructions:
         explanation: Vátta nýggja bústaðin fyri at broyta teldupostin.
         extra: Um henda broytingin ikki kemur frá tær, so skal tú ignorera hetta teldubrævið. Telduposturin til Mastodon kontuna verður ikki broytt, uttan so at tú fylgir leinkinum omanfyri.

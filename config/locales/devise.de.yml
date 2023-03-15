@@ -30,11 +30,6 @@ de:
         extra: Wenn du deine E-Mail-Adresse nicht geändert hast, dann wird es vermutlich so sein, dass jemand Zugriff zu deinem Account erhalten hat. Bitte ändere sofort dein Passwort oder kontaktiere den Administrator des Servers, wenn du dich ausgesperrt hast.
         subject: 'Mastodon: E-Mail-Adresse geändert'
         title: Neue E-Mail-Adresse
-      password_change:
-        explanation: Das Passwort für deinen Account wurde geändert.
-        extra: Wenn du dein Passwort nicht geändert hast, dann wird es vermutlich so sein, dass jemand Zugriff auf deinem Account erlangt hat. Bitte ändere sofort dein Passwort oder kontaktiere den Administrator des Servers, wenn du dich ausgesperrt hast.
-        subject: 'Mastodon: Passwort geändert'
-        title: Passwort geändert
       reconfirmation_instructions:
         explanation: Bestätige deine neue E-Mail-Adresse, um sie zu ändern.
         extra: Wenn diese Änderung nicht von dir ausgeführt wurde, dann solltest du diese E-Mail ignorieren. Die E-Mail-Adresse für deinen Mastodon-Account wird sich nicht ändern, bis du den obigen Link anklickst.

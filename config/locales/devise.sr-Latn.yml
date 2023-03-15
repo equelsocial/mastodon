@@ -30,11 +30,6 @@ sr-Latn:
         extra: Ako niste promenili vašu e-poštu, sasvim je moguće da je neko drugi dobio pristup vašem nalogu. Molimo promenite lozinku odmah ili kontaktirajte administratora instance ako ste zaključani izvan vašeg naloga.
         subject: 'Mastodon: E-pošta promenjena'
         title: Nova adresa e-pošte
-      password_change:
-        explanation: Lozinka vašeg naloga je promenjena.
-        extra: Ako niste promenili vašu e-poštu, sasvim je moguće da je neko drugi dobio pristup vašem nalogu. Molimo promenite lozinku odmah ili kontaktirajte administratora instance ako ste zaključani izvan vašeg naloga.
-        subject: 'Mastodont: Lozinka promenjena'
-        title: Lozinka promenjena
       reconfirmation_instructions:
         explanation: Potvrdite novu adresu da biste promenili e-poštu.
         extra: Ako ova promena nije inicirana sa vaše strane, molimo ignorišite ovu e-poštu. Adresa e-pošta za ovaj Mastodon nalog neće biti promenjena dok ne pristupite poveznici/linku iznad.

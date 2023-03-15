@@ -30,11 +30,6 @@ vi:
         extra: Nếu bạn không thay đổi email của mình, có khả năng ai đó đã truy cập được vào tài khoản của bạn. Hãy thay đổi mật khẩu ngay lập tức hoặc liên hệ với quản trị viên.
         subject: 'Mastodon: Email đã thay đổi'
         title: Địa chỉ email mới
-      password_change:
-        explanation: Mật khẩu tài khoản của bạn đã được thay đổi.
-        extra: Nếu bạn không thay đổi mật khẩu tài khoản của mình, có khả năng ai đó đã truy cập được vào tài khoản của bạn. Hãy thay đổi mật khẩu ngay lập tức hoặc liên hệ với quản trị viên.
-        subject: 'Mastodon: Mật khẩu đã thay đổi'
-        title: Mật khẩu đã được thay đổi
       reconfirmation_instructions:
         explanation: Xác nhận địa chỉ email mới của bạn.
         extra: Nếu thay đổi này không phải do bạn thực hiện, vui lòng bỏ qua email này. Địa chỉ email cho tài khoản Mastodon sẽ giữ nguyên cho đến khi bạn truy cập vào liên kết ở trên.

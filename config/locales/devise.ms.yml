@@ -21,10 +21,6 @@ ms:
         explanation: 'Alamat e-mel untuk akaun anda sedang diubah kepada:'
         subject: 'Mastodon: E-mel ditukar'
         title: Alamat e-mel baru
-      password_change:
-        explanation: Kata laluan untuk akaun anda telah ditukar.
-        subject: 'Mastodon: Kata laluan diubah'
-        title: Kata laluan ditukar
       reconfirmation_instructions:
         explanation: Sahkan alamat baru untuk menukarkan e-mel anda.
         title: Sahkan alamat e-mel

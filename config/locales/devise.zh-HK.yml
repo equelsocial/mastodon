@@ -30,11 +30,6 @@ zh-HK:
         extra: 如果你沒有更改你的電郵地址，那很有可能已經有其他人入侵你的帳號。請立即更改你的密碼；如果你已經無法訪問你的帳戶，請聯繫服務站的管理員請求協助。
         subject: Mastodon：電郵地址已被更改
         title: 新電郵地址
-      password_change:
-        explanation: 你的帳號的密碼已被更改。
-        extra: 如果你沒有更改你的密碼，那很有可能已經有其他人入侵你的帳號。請立即更改你的密碼；如果你已經無法訪問你的帳戶，請聯繫服務站的管理員請求協助。
-        subject: 'Mastodon: 密碼已被更改'
-        title: 密碼已被更改
       reconfirmation_instructions:
         explanation: 點擊下面的連結來確認你的新電郵地址。
         extra: 如果你沒有請求本次變更，請忽略此郵件。 Mastodon 帳戶的電子郵件地址只有在你點擊上面的連結後才會更改。

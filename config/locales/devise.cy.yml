@@ -30,11 +30,6 @@ cy:
         extra: Os nad ydych wedi newid eich e-bost, mae'n debygol fod rhywun wedi mewngofnodi i'ch cyfrif. Newidiwch eich cyfrinair cyn gynted â phosib neu gysylltwch â'r gweinyddwyr os ydych wedi cael eich cloi allan o'ch cyfrif.
         subject: 'Mastodon: E-bost wedi''i newid'
         title: Cyfeiriad e-bost newydd
-      password_change:
-        explanation: Newidwyd cyfrinair eich cyfrif.
-        extra: Os nad ydych wedi newid eich cyfrinair, mae'n debygol fod rhywun wedi mewngofnodi i'ch cyfrif. Newidiwch eich cyfrinair cyn gynted â phosib neu gysylltwch â'r gweinyddwyr os ydych wedi cael eich cloi allan o'ch cyfrif.
-        subject: 'Mastodon: Cyfrinair wedi''i newid'
-        title: Newidwyd cyfrinair
       reconfirmation_instructions:
         explanation: Cadarnhewch y cyfeiriad newydd i newid eich e-bost.
         extra: Os na chychwynnwyd y newid hwn gennych chi, anwybyddwch yr e-bost hwn. Ni fydd cyfeiriad e-bost y cyfrif Mastodon yn newid nes i chi gael mynediad i'r ddolen uchod.

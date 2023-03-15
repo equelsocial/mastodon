@@ -30,11 +30,6 @@ id:
         extra: Jika Anda tak mengganti email Anda, mungkin seseorang telah mendapatkan akses ke akun Anda. Mohon ubah kata sandi secepatnya atau hubungi admin server jika akun Anda terkunci.
         subject: 'Mastodon: Email diganti'
         title: Alamat email baru
-      password_change:
-        explanation: Kata sandi akun Anda telah diganti.
-        extra: Jika Anda tak mengubah kata sandi Anda, mungkin seseorang telah mendapatkan akses ke akun Anda. Mohon ubah kata sandi secepatnya atau hubungi admin server jika Anda dikunci dari akun Anda.
-        subject: 'Mastodon: Kata sandi telah diubah'
-        title: Kata sandi diubah
       reconfirmation_instructions:
         explanation: Konfirmasi alamat baru untuk mengubah email Anda.
         extra: Jika perubahan ini tidak dimulai dari Anda, abaikan email ini. Alamat email untuk akun Mastodon tak berubah sampai Anda mengakses tautan di atas.

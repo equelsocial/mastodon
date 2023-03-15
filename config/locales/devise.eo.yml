@@ -30,11 +30,6 @@ eo:
         extra: Se vi ne volis ŝanĝi vian retadreson, iu verŝajne aliris al via konto. Bonvolu tuj ŝanĝi vian pasvorton aŭ kontakti la administranton de la servilo, se vi estas blokita ekster via konto.
         subject: 'Mastodon: Retpoŝton ŝanĝiĝis'
         title: Nova retadreso
-      password_change:
-        explanation: La pasvorto de via konto estis ŝanĝita.
-        extra: Se vi ne ŝanĝis vian pasvorton, iu verŝajne aliris al via konto. Bonvolu ŝanĝi vian pasvorton tuj aŭ kontakti la administranton de la servilo, se vi estas blokita ekster via konto.
-        subject: 'Mastodon: Pasvorto ŝanĝita'
-        title: Pasvorto estas ŝanĝita
       reconfirmation_instructions:
         explanation: Retajpu la novan adreson por ŝanĝi vian retpoŝtadreson.
         extra: Se ĉi tiu ŝanĝo ne estis komencita de vi, bonvolu ignori ĉi tiun retmesaĝon. La retadreso por la Mastodon-konto ne ŝanĝiĝos se vi ne aliras la supran ligilon.

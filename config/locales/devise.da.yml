@@ -30,11 +30,6 @@ da:
         extra: Har du ikke selv skiftet din e-mailadresse, har nogen sandsynligvis opnået adgang til din konto. Skift derfor straks din adgangskode eller kontakt serveradministratoren, hvis du er låst ude af kontoen.
         subject: 'Mastodon: E-mail skiftet'
         title: Ny e-mailadresse
-      password_change:
-        explanation: Din kontoadgangskode er skiftet.
-        extra: Har du ikke selv skiftet din adgangskode, har nogen sandsynligvis opnået adgang til din konto. Skift derfor straks din adgangskode eller kontakt serveradministratoren, hvis du er låst ude af kontoen.
-        subject: 'Mastodon: Adgangskode skiftet'
-        title: Adgangskode skiftet
       reconfirmation_instructions:
         explanation: Bekræft den nye adresse for at skifte din e-mail.
         extra: Er denne ændring ikke foranlediget af dig, så ignorér denne e-mail. Mastodon-kontoens e-mailadresse kan kun skiftes vha. linket ovenfor.

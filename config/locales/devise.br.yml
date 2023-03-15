@@ -30,11 +30,6 @@ br:
         extra: Ma n'ho peus ket kemmet ho postel, e seblant un den bennak en deus gallet mont-tre d'ho kont. Mar plij, kemmit ho ker-tremen hep gortoz, pe kit e darempred gant merer ar servijer ma'z oc'h bac'het e-maez ho kont.
         subject: 'Mastodoñ : Postel kemmet'
         title: Chomlec'h postel nevez
-      password_change:
-        explanation: Kemmet eo bet ger-tremen ho kont.
-        extra: Ma n'ho peus ket kemmet ho ker-tremen, e seblant un den bennak en deus gallet mont-tre d'ho kont. Mar plij, kemmit ho ker-tremen hep gortoz, pe kit e darempred gant merer ar servijer ma'z oc'h bac'het e-maez ho kont.
-        subject: 'Mastodoñ : Ger-tremen kemmet'
-        title: Ger-tremen kemmet
       reconfirmation_instructions:
         explanation: Kadarnait ar chomlec'h nevez evit kemmañ ho postel.
         extra: Ma ne oa ket lañset ar ch'emm-se ganeoc'h, dianavezit ar postel-mañ. Chomlec'h-postel ar c'hont Mastodon ne vo ket kemmet keit ha ma c'hlikit ar lec'hienn a-us.

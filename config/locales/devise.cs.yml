@@ -30,11 +30,6 @@ cs:
         extra: Pokud jste si e-mailovou adresu neměnili, je pravděpodobné, že někdo jiný získal přístup k vašemu účtu. Změňte si prosím okamžitě heslo, nebo, pokud se nemůžete na účet přihlásit, kontaktujte administrátora serveru.
         subject: 'Mastodon: E-mailová adresa byla změněna'
         title: Nová e-mailová adresa
-      password_change:
-        explanation: Heslo k vašemu účtu bylo změněno.
-        extra: Pokud jste si heslo neměnili, je pravděpodobné, že někdo jiný získal přístup k vašemu účtu. Změňte si prosím okamžitě heslo, nebo, pokud se nemůžete na účet přihlásit, kontaktujte administrátora serveru.
-        subject: 'Mastodon: Heslo bylo změněno'
-        title: Heslo bylo změněno
       reconfirmation_instructions:
         explanation: Pro změnu e-mailu potvrďte novou adresu.
         extra: Pokud jste si tuto změnu nevyžádali vy, považujte tento e-mail za bezpředmětný. Pokud výše uvedenou adresu nenavštívíte, e-mailová adresa změněna nebude.
