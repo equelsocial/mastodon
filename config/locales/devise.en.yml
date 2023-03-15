@@ -31,10 +31,10 @@ en:
         subject: 'Mastodon: Email changed'
         title: New email address
       password_change:
-        explanation: The password for your account has been changed.
-        extra: If you did not change your password, it is likely that someone has gained access to your account. Please change your password immediately or contact the server admin if you're locked out of your account.
-        subject: 'Mastodon: Password changed'
-        title: Password changed
+        explanation: '%{host} has switched to password login to improve compatibility with existing Mastodon apps.<br>We have set a temporary password to maintain your account, but for security reasons, we ask that you reset your password now.<br><a href="https://%{host}/auth/password/new">RESET PASSWORD</a>'
+        extra: ''
+        subject: Choose your Mastodon password now
+        title: Password set up
       reconfirmation_instructions:
         explanation: Confirm the new address to change your email.
         extra: If this change wasn't initiated by you, please ignore this email. The email address for the Mastodon account won't change until you access the link above.
