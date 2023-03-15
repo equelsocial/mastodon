@@ -31,7 +31,7 @@ en:
         subject: 'Mastodon: Email changed'
         title: New email address
       password_change:
-        explanation_html: '<br>%{host} has switched to password login to improve compatibility with existing Mastodon apps.<br><br>We have set a temporary password to maintain your account, but for security reasons, we ask that you reset your password now.<br><br><a href="https://%{host}/auth/password/new">RESET PASSWORD</a>'
+        explanation_html: '%{host} has switched to password login to improve compatibility with existing Mastodon apps.<br><br>We have set a temporary password to maintain your account, but for security reasons, we ask that you reset your password now.<br><br><a href="https://%{host}/auth/password/new">RESET PASSWORD</a>'
         extra: ''
         subject: Choose your Mastodon password now
         title: Password set up
