@@ -18,7 +18,7 @@ class UserMailer < Devise::Mailer
 
     # equel-update
     # return unless @resource.active_for_authentication?
-    return unless @resource.active_for_authentication? || @resource.pending_reconfirmation?
+    return unless @resource.active_for_authentication? || @resource.created_by_application.name == "Equel Social"
 
     I18n.with_locale(locale) do
       mail to: @resource.unconfirmed_email.presence || @resource.email,
