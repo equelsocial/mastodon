@@ -16,7 +16,9 @@ class UserMailer < Devise::Mailer
     @token    = token
     @instance = Rails.configuration.x.local_domain
 
-    return unless @resource.active_for_authentication?
+    # equel-update
+    # return unless @resource.active_for_authentication?
+    return unless @resource.active_for_authentication? || @resource.pending_reconfirmation?
 
     I18n.with_locale(locale) do
       mail to: @resource.unconfirmed_email.presence || @resource.email,
