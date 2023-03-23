@@ -19,7 +19,7 @@ en-GB:
     mailer:
       confirmation_instructions:
         action: Change email address
-        action_with_app: Change email address on %{app}
+        action_with_app: Change %{app} email
         explanation: You have created an account on %{host} with this email address. If you wish to change your account email, you can do so by clicking on the button below.
         explanation_when_pending: You have created an account on %{host} with this email address. If you wish to change your account email, you can do so by clicking on the button below.
         extra_html: Please also check out <a href="%{terms_path}">the rules of the server</a> and <a href="%{policy_path}">our terms of service</a>.
