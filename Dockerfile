@@ -5,7 +5,7 @@ ARG NODE_VERSION="16.20-bullseye-slim"
 FROM ghcr.io/moritzheiber/ruby-jemalloc:3.2.2-slim as ruby
 FROM node:${NODE_VERSION} as build
 
-COPY --link --from=ruby /opt/ruby /opt/ruby
+COPY --from=ruby /opt/ruby /opt/ruby
 
 ENV DEBIAN_FRONTEND="noninteractive" \
     PATH="${PATH}:/opt/ruby/bin"
@@ -44,7 +44,7 @@ FROM node:${NODE_VERSION}
 ARG UID="991"
 ARG GID="991"
 
-COPY --link --from=ruby /opt/ruby /opt/ruby
+COPY --from=ruby /opt/ruby /opt/ruby
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
