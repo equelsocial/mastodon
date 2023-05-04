@@ -1,0 +1,46 @@
+name: Deploy to production environment
+run-name: Deploy ${{ github.ref_name }} to production - @${{ github.actor }}
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check-image-exists:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_KEY }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET }}
+          aws-region: eu-west-1
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Check that image exists
+        env:
+          ECR_REPOSITORY: mastodon
+          IMAGE_TAG: ${{ github.ref_name }}
+        run: |
+          TAG_FOUND=$(echo $(aws ecr list-images --repository-name mastodon --query "imageIds[?imageTag=='$IMAGE_TAG'].imageTag" --output text))
+          if [[ $TAG_FOUND ]]; then
+            echo "$IMAGE_TAG: Tag found"
+          else
+            echo "$IMAGE_TAG: Tag not found"
+            exit 1
+          fi
+
+  deploy-prod:
+    name: production
+    needs: check-image-exists
+    uses: ./.github/workflows/deploy.yml
+    with:
+      app-name: mastodon
+      image-tag: ${{ github.ref_name }}
+      environment: production
+      config-file-name: kubernetes/kubernetes/mastodon/values-prod.yaml
+    secrets:
+      ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
+      SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

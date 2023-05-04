@@ -1,0 +1,60 @@
+name: Deploy a new version
+
+on:
+  workflow_call:
+    inputs:
+      app-name:
+        required: true
+        type: string
+      image-tag:
+        required: true
+        type: string
+      environment:
+        required: true
+        type: string
+      config-file-name:
+        required: true
+        type: string
+    secrets:
+      ACTIONS_TOKEN:
+        required: true
+      SLACK_WEBHOOK:
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out infra repo
+        uses: actions/checkout@v3
+        with:
+          repository: equelsocial/infra
+          token: ${{ secrets.ACTIONS_TOKEN }}
+
+      - name: Deploy to ${{ inputs.environment }} environment
+        env:
+          APP_NAME: ${{ inputs.app-name }}
+          CONFIG_FILE_NAME: ${{ inputs.config-file-name }}
+          ENV: ${{ inputs.environment }}
+          IMAGE_TAG: ${{ inputs.image-tag }}
+        run: |
+          sed "s/tag: .*/tag: $IMAGE_TAG/" $CONFIG_FILE_NAME > tmp && mv tmp $CONFIG_FILE_NAME
+          if [[ -z $(git status --porcelain) ]]
+          then
+            echo "TAG_UPDATED=false" >> $GITHUB_ENV
+            exit 0
+          fi
+          git config --global user.email "${{ github.event.repository.name }}@equelsocial.com"
+          git config --global user.name "${{ github.event.repository.name }}"
+          git add . && git commit -m "Set $APP_NAME image version to $IMAGE_TAG in the $ENV environment" && git push
+          echo "TAG_UPDATED=true" >> $GITHUB_ENV
+
+      - name: Slack Notification
+        if: env.TAG_UPDATED == 'true'
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_USERNAME: ${{ inputs.app-name }}
+          SLACK_MESSAGE: Deployment of the ${{ inputs.app-name }} to the ${{ inputs.environment }} environment is in progress. See the changes live within the next 15 minutes.
+          SLACK_ICON_EMOJI: ':hourglass_flowing_sand:'
+          SLACK_COLOR: '#83502e'
