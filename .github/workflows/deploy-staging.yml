@@ -14,7 +14,6 @@ jobs:
     uses: ./.github/workflows/check-i18n.yml
 
   build:
-    needs: [linter, check-i18n]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
