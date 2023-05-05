@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage, FormattedDate, injectIntl, defineMessages } from 'react-intl';
 import Column from 'mastodon/components/column';
-import TermsOfServiceContent from './content'
+import TermsOfServiceContent from './content';
 
 const messages = defineMessages({
   title: { id: 'terms_of_service.title', defaultMessage: 'Terms of Service' },
 });
 
-export default @injectIntl
 class TermsOfService extends React.PureComponent {
 
   static propTypes = {
@@ -21,9 +20,8 @@ class TermsOfService extends React.PureComponent {
     lastUpdated: new Date(2022, 11, 15),
   };
 
-  render () {
+  render() {
     const { intl, multiColumn } = this.props;
-    console.log(this.state.lastUpdated)
 
     return (
       <Column bindToDocument={!multiColumn} label={intl.formatMessage(messages.title)}>
@@ -49,3 +47,5 @@ class TermsOfService extends React.PureComponent {
   }
 
 }
+
+export default injectIntl(TermsOfService);

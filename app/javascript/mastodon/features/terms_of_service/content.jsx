@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default class TermsOfServiceDocument extends React.PureComponent {
+
   render() {
     return (
       <>
@@ -445,4 +446,5 @@ export default class TermsOfServiceDocument extends React.PureComponent {
       </>
     );
   }
+
 }
