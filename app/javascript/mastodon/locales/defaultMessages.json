@@ -3888,19 +3888,6 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Terms of Service",
-        "id": "terms_of_service.title"
-      },
-      {
-        "defaultMessage": "Last updated {date}",
-        "id": "terms_of_service.last_updated"
-      }
-    ],
-    "path": "app/javascript/mastodon/features/terms_of_service/index.json"
-  },
-  {
-    "descriptors": [
-      {
         "defaultMessage": "Are you sure you want to block {name}?",
         "id": "confirmations.block.message"
       },

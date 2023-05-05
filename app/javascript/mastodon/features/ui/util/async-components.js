@@ -185,7 +185,3 @@ export function About () {
 export function PrivacyPolicy () {
   return import(/*webpackChunkName: "features/privacy_policy" */'../../privacy_policy');
 }
-
-export function TermsOfService () {
-  return import(/*webpackChunkName: "features/terms_of_service" */'../../terms_of_service');
-}
