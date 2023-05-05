@@ -3402,19 +3402,6 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Terms of Service",
-        "id": "terms_of_service.title"
-      },
-      {
-        "defaultMessage": "Last updated {date}",
-        "id": "terms_of_service.last_updated"
-      }
-    ],
-    "path": "app/javascript/mastodon/features/terms_of_service/index.json"
-  },
-  {
-    "descriptors": [
-      {
         "defaultMessage": "Media only",
         "id": "community.column_settings.media_only"
       },
@@ -3901,6 +3888,19 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "Terms of Service",
+        "id": "terms_of_service.title"
+      },
+      {
+        "defaultMessage": "Last updated {date}",
+        "id": "terms_of_service.last_updated"
+      }
+    ],
+    "path": "app/javascript/mastodon/features/terms_of_service/index.json"
+  },
+  {
+    "descriptors": [
+      {
         "defaultMessage": "Are you sure you want to block {name}?",
         "id": "confirmations.block.message"
       },
@@ -4232,6 +4232,10 @@
       {
         "defaultMessage": "Privacy policy",
         "id": "footer.privacy_policy"
+      },
+      {
+        "defaultMessage": "Terms of Service",
+        "id": "footer.terms_of_service"
       },
       {
         "defaultMessage": "Get the app",
