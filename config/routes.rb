@@ -27,6 +27,7 @@ Rails.application.routes.draw do
     /blocks
     /domain_blocks
     /mutes
+    /terms-of-service
     /followed_tags
     /statuses/(*any)
   ).freeze
