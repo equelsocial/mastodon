@@ -1,14 +1,21 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import { PureComponent } from 'react';
+
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
-import { formatTime, getPointerPosition, fileNameFromURL } from 'mastodon/features/video';
-import Icon from 'mastodon/components/icon';
+
 import classNames from 'classnames';
-import { throttle, debounce } from 'lodash';
-import Visualizer from './visualizer';
-import { displayMedia, useBlurhash } from '../../initial_state';
-import Blurhash from '../../components/blurhash';
+
 import { is } from 'immutable';
+
+import { throttle, debounce } from 'lodash';
+
+import { Icon }  from 'mastodon/components/icon';
+import { formatTime, getPointerPosition, fileNameFromURL } from 'mastodon/features/video';
+
+import { Blurhash } from '../../components/blurhash';
+import { displayMedia, useBlurhash } from '../../initial_state';
+
+import Visualizer from './visualizer';
 
 const messages = defineMessages({
   play: { id: 'video.play', defaultMessage: 'Play' },
@@ -22,7 +29,7 @@ const messages = defineMessages({
 const TICK_SIZE = 10;
 const PADDING   = 180;
 
-class Audio extends React.PureComponent {
+class Audio extends PureComponent {
 
   static propTypes = {
     src: PropTypes.string.isRequired,
@@ -136,7 +143,7 @@ class Audio extends React.PureComponent {
     }
   }
 
-  componentWillReceiveProps (nextProps) {
+  UNSAFE_componentWillReceiveProps (nextProps) {
     if (!is(nextProps.visible, this.props.visible) && nextProps.visible !== undefined) {
       this.setState({ revealed: nextProps.visible });
     }
@@ -459,10 +466,12 @@ class Audio extends React.PureComponent {
 
   render () {
     const { src, intl, alt, lang, editable, autoPlay, sensitive, blurhash } = this.props;
-    const { paused, muted, volume, currentTime, duration, buffer, dragging, revealed } = this.state;
+    const { paused, volume, currentTime, duration, buffer, dragging, revealed } = this.state;
     const progress = Math.min((currentTime / duration) * 100, 100);
+    const muted = this.state.muted || volume === 0;
 
     let warning;
+
     if (sensitive) {
       warning = <FormattedMessage id='status.sensitive_warning' defaultMessage='Sensitive content' />;
     } else {
@@ -508,7 +517,10 @@ class Audio extends React.PureComponent {
 
         <div className={classNames('spoiler-button', { 'spoiler-button--hidden': revealed || editable })}>
           <button type='button' className='spoiler-button__overlay' onClick={this.toggleReveal}>
-            <span className='spoiler-button__overlay__label'>{warning}</span>
+            <span className='spoiler-button__overlay__label'>
+              {warning}
+              <span className='spoiler-button__overlay__action'><FormattedMessage id='status.media.show' defaultMessage='Click to show' /></span>
+            </span>
           </button>
         </div>
 
@@ -546,12 +558,12 @@ class Audio extends React.PureComponent {
               <button type='button' title={intl.formatMessage(muted ? messages.unmute : messages.mute)} aria-label={intl.formatMessage(muted ? messages.unmute : messages.mute)} className='player-button' onClick={this.toggleMute}><Icon id={muted ? 'volume-off' : 'volume-up'} fixedWidth /></button>
 
               <div className={classNames('video-player__volume', { active: this.state.hovered })} ref={this.setVolumeRef} onMouseDown={this.handleVolumeMouseDown}>
-                <div className='video-player__volume__current' style={{ width: `${volume * 100}%`, backgroundColor: this._getAccentColor() }} />
+                <div className='video-player__volume__current' style={{ width: `${muted ? 0 : volume * 100}%`, backgroundColor: this._getAccentColor() }} />
 
                 <span
                   className='video-player__volume__handle'
                   tabIndex={0}
-                  style={{ left: `${volume * 100}%`, backgroundColor: this._getAccentColor() }}
+                  style={{ left: `${muted ? 0 : volume * 100}%`, backgroundColor: this._getAccentColor() }}
                 />
               </div>
 

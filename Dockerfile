@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.4
-# This needs to be bullseye-slim because the Ruby image is built on bullseye-slim
-ARG NODE_VERSION="16.20-bullseye-slim"
+# This needs to be bookworm-slim because the Ruby image is built on bookworm-slim
+ARG NODE_VERSION="16.20-bookworm-slim"
 
 FROM ghcr.io/moritzheiber/ruby-jemalloc:3.2.2-slim as ruby
 FROM node:${NODE_VERSION} as build
@@ -20,7 +20,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends build-essential \
         git \
         libicu-dev \
-        libidn11-dev \
+        libidn-dev \
         libpq-dev \
         libjemalloc-dev \
         zlib1g-dev \
@@ -41,6 +41,10 @@ RUN apt-get update && \
 
 FROM node:${NODE_VERSION}
 
+# Use those args to specify your own version flags & suffixes
+ARG MASTODON_VERSION_PRERELEASE=""
+ARG MASTODON_VERSION_METADATA=""
+
 ARG UID="991"
 ARG GID="991"
 
@@ -51,7 +55,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ENV DEBIAN_FRONTEND="noninteractive" \
     PATH="${PATH}:/opt/ruby/bin:/opt/mastodon/bin"
 
-# Ignoreing these here since we don't want to pin any versions and the Debian image removes apt-get content after use
+# Ignoring these here since we don't want to pin any versions and the Debian image removes apt-get content after use
 # hadolint ignore=DL3008,DL3009
 RUN apt-get update && \
     echo "Etc/UTC" > /etc/localtime && \
@@ -60,13 +64,13 @@ RUN apt-get update && \
     apt-get -y --no-install-recommends install whois \
         wget \
         procps \
-        libssl1.1 \
+        libssl3 \
         libpq5 \
         imagemagick \
         ffmpeg \
         libjemalloc2 \
-        libicu67 \
-        libidn11 \
+        libicu72 \
+        libidn12 \
         libyaml-0-2 \
         file \
         ca-certificates \
@@ -84,7 +88,9 @@ COPY --chown=mastodon:mastodon --from=build /opt/mastodon /opt/mastodon
 ENV RAILS_ENV="production" \
     NODE_ENV="production" \
     RAILS_SERVE_STATIC_FILES="true" \
-    BIND="0.0.0.0"
+    BIND="0.0.0.0" \
+    MASTODON_VERSION_PRERELEASE="${MASTODON_VERSION_PRERELEASE}" \
+    MASTODON_VERSION_METADATA="${MASTODON_VERSION_METADATA}"
 
 # Set the run user
 USER mastodon
