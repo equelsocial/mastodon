@@ -1,0 +1,34 @@
+name: Deploy to staging on GCP
+run-name: Deploy ${{ github.ref_name }} to staging on GCP - @${{ github.actor }}
+
+on:
+  push:
+    tags: v*
+
+jobs:
+  # test:
+  #   uses: ./.github/workflows/job-test.yml
+  #   secrets: inherit
+
+  build:
+    name: build
+    uses: ./.github/workflows/job-gcp-build.yml
+    with:
+      image-tag: ${{ github.ref_name }}
+    secrets:
+      WIF_PROVIDER: ${{ secrets.WIF_PROVIDER }}
+      WIF_SERVICE_ACCOUNT: ${{ secrets.WIF_SERVICE_ACCOUNT }}
+
+  deploy-staging:
+    name: staging
+    needs: build
+    uses: ./.github/workflows/job-deploy.yml
+    with:
+      app-name: backend
+      image-tag: ${{ github.ref_name }}
+      environment: staging
+      app-config-folder: kubernetes/backend/env/stage
+      branch: gcloud
+    secrets:
+      ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
+      SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

@@ -2,8 +2,7 @@ name: Deploy to staging environment
 run-name: Deploy ${{ github.ref_name }} to staging - @${{ github.actor }}
 
 on:
-  push:
-    tags: v*
+  workflow_dispatch:
 
 jobs:
   build:

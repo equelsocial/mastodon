@@ -1,0 +1,15 @@
+name: Build to Google Artifact Registry
+run-name: Build ${{ github.ref_name }} to Google Artifact Registry - @${{ github.actor }}
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: build
+    uses: ./.github/workflows/job-gcp-build.yml
+    with:
+      image-tag: ${{ github.ref_name }}
+    secrets:
+      WIF_PROVIDER: ${{ secrets.WIF_PROVIDER }}
+      WIF_SERVICE_ACCOUNT: ${{ secrets.WIF_SERVICE_ACCOUNT }}

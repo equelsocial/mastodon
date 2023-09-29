@@ -12,8 +12,13 @@ on:
       environment:
         required: true
         type: string
-      config-file-name:
+      app-config-folder:
+        description: "Folder of infra repo containing kustomize config for app. Should contain a kustomization file with the image tag."
         required: true
+        type: string
+      branch:
+        description: "Branch of infra repo to push tag to"
+        default: ""
         type: string
     secrets:
       ACTIONS_TOKEN:
@@ -30,15 +35,17 @@ jobs:
         with:
           repository: equelsocial/infra
           token: ${{ secrets.ACTIONS_TOKEN }}
+          ref: ${{ inputs.branch }}
 
       - name: Deploy to ${{ inputs.environment }} environment
         env:
           APP_NAME: ${{ inputs.app-name }}
-          CONFIG_FILE_NAME: ${{ inputs.config-file-name }}
+          CONFIG_FOLDER: ${{ inputs.app-config-folder }}
           ENV: ${{ inputs.environment }}
           IMAGE_TAG: ${{ inputs.image-tag }}
         run: |
-          sed "s/tag: .*/tag: $IMAGE_TAG/" $CONFIG_FILE_NAME > tmp && mv tmp $CONFIG_FILE_NAME
+          cd $CONFIG_FOLDER
+          sed "s/newTag: .*/newTag: $IMAGE_TAG/" kustomization.yaml > tmp && mv tmp kustomization.yaml
           if [[ -z $(git status --porcelain) ]]
           then
             echo "TAG_UPDATED=false" >> $GITHUB_ENV
@@ -56,5 +63,5 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_USERNAME: ${{ inputs.app-name }}
           SLACK_MESSAGE: Deployment of the ${{ inputs.app-name }} to the ${{ inputs.environment }} environment is in progress. See the changes live within the next 15 minutes.
-          SLACK_ICON_EMOJI: ':hourglass_flowing_sand:'
-          SLACK_COLOR: '#83502e'
+          SLACK_ICON_EMOJI: ":hourglass_flowing_sand:"
+          SLACK_COLOR: "#83502e"

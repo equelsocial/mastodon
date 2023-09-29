@@ -1,0 +1,19 @@
+name: Deploy to production on GCP
+run-name: Deploy ${{ github.ref_name }} to production on GCP - @${{ github.actor }}
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-prod:
+    name: production
+    uses: ./.github/workflows/job-deploy.yml
+    with:
+      app-name: backend
+      image-tag: ${{ github.ref_name }}
+      environment: production
+      app-config-folder: kubernetes/backend/env/prod
+      branch: gcloud
+    secrets:
+      ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
+      SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

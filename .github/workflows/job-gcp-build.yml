@@ -1,0 +1,53 @@
+name: Build to Google Artifact Registry
+
+on:
+  workflow_call:
+    inputs:
+      image-tag:
+        required: true
+        type: string
+      location:
+        type: string
+        default: europe-north1
+      project-id:
+        type: string
+        default: vpc-host-prod-equel
+    secrets:
+      WIF_PROVIDER:
+        required: true
+      WIF_SERVICE_ACCOUNT:
+        required: true
+
+jobs:
+  build:
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    runs-on: ubuntu-latest-m
+
+    steps:
+      - name: 'Checkout'
+        uses: 'actions/checkout@v3'
+
+      - name: 'Google Auth'
+        id: 'auth'
+        uses: 'google-github-actions/auth@v1'
+        with:
+          workload_identity_provider: '${{ secrets.WIF_PROVIDER }}'
+          service_account: '${{ secrets.WIF_SERVICE_ACCOUNT }}'
+
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v1'
+        with:
+          project_id: '${{ inputs.project-id }}'
+
+      - name: 'Docker Auth'
+        run: |-
+          gcloud auth configure-docker ${{ inputs.location }}-docker.pkg.dev
+
+      - name: 'Build and push container'
+        run: |-
+          REMOTE="${{ inputs.location }}-docker.pkg.dev/${{ inputs.project-id }}/backend/backend:${{ inputs.image-tag }}"
+          docker build -t $REMOTE --build-arg RELEASE=${{ inputs.image-tag }} .
+          docker push $REMOTE
