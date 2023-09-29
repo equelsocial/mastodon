@@ -28,7 +28,7 @@ jobs:
       app-name: mastodon
       image-tag: ${{ github.ref_name }}
       environment: staging
-      config-file-name: kubernetes/mastodon/values-dev.yaml
+      config-file-name: kubernetes/mastodon/values-stage.yaml
       branch: gcloud
     secrets:
       ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
