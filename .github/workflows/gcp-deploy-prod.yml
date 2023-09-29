@@ -9,10 +9,10 @@ jobs:
     name: production
     uses: ./.github/workflows/job-deploy.yml
     with:
-      app-name: backend
+      app-name: mastodon
       image-tag: ${{ github.ref_name }}
       environment: production
-      app-config-folder: kubernetes/backend/env/prod
+      app-config-folder: kubernetes/mastodon/env/prod
       branch: gcloud
     secrets:
       ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}

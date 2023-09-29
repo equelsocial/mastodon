@@ -14,6 +14,7 @@ jobs:
     name: build
     uses: ./.github/workflows/job-gcp-build.yml
     with:
+      repo-name: mastodon
       image-tag: ${{ github.ref_name }}
     secrets:
       WIF_PROVIDER: ${{ secrets.WIF_PROVIDER }}
@@ -24,10 +25,10 @@ jobs:
     needs: build
     uses: ./.github/workflows/job-deploy.yml
     with:
-      app-name: backend
+      app-name: mastodon
       image-tag: ${{ github.ref_name }}
       environment: staging
-      app-config-folder: kubernetes/backend/env/stage
+      app-config-folder: kubernetes/mastodon/env/stage
       branch: gcloud
     secrets:
       ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}

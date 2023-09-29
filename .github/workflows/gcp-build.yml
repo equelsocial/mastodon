@@ -9,6 +9,7 @@ jobs:
     name: build
     uses: ./.github/workflows/job-gcp-build.yml
     with:
+      repo-name: mastodon
       image-tag: ${{ github.ref_name }}
     secrets:
       WIF_PROVIDER: ${{ secrets.WIF_PROVIDER }}

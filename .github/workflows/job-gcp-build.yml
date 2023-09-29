@@ -3,6 +3,9 @@ name: Build to Google Artifact Registry
 on:
   workflow_call:
     inputs:
+      repo-name:
+        required: true
+        type: string
       image-tag:
         required: true
         type: string
@@ -48,6 +51,6 @@ jobs:
 
       - name: 'Build and push container'
         run: |-
-          REMOTE="${{ inputs.location }}-docker.pkg.dev/${{ inputs.project-id }}/backend/backend:${{ inputs.image-tag }}"
+          REMOTE="${{ inputs.location }}-docker.pkg.dev/${{ inputs.project-id }}/${{ inputs.repo-name }}/${{ inputs.repo-name }}:${{ inputs.image-tag }}"
           docker build -t $REMOTE --build-arg RELEASE=${{ inputs.image-tag }} .
           docker push $REMOTE

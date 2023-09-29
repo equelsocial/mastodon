@@ -13,12 +13,12 @@ on:
         required: true
         type: string
       app-config-folder:
-        description: "Folder of infra repo containing kustomize config for app. Should contain a kustomization file with the image tag."
+        description: 'Folder of infra repo containing kustomize config for app. Should contain a kustomization file with the image tag.'
         required: true
         type: string
       branch:
-        description: "Branch of infra repo to push tag to"
-        default: ""
+        description: 'Branch of infra repo to push tag to'
+        default: ''
         type: string
     secrets:
       ACTIONS_TOKEN:
@@ -63,5 +63,5 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_USERNAME: ${{ inputs.app-name }}
           SLACK_MESSAGE: Deployment of the ${{ inputs.app-name }} to the ${{ inputs.environment }} environment is in progress. See the changes live within the next 15 minutes.
-          SLACK_ICON_EMOJI: ":hourglass_flowing_sand:"
-          SLACK_COLOR: "#83502e"
+          SLACK_ICON_EMOJI: ':hourglass_flowing_sand:'
+          SLACK_COLOR: '#83502e'
