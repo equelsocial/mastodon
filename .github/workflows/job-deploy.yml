@@ -12,8 +12,7 @@ on:
       environment:
         required: true
         type: string
-      app-config-folder:
-        description: 'Folder of infra repo containing kustomize config for app. Should contain a kustomization file with the image tag.'
+      config-file-name:
         required: true
         type: string
       branch:
@@ -40,12 +39,11 @@ jobs:
       - name: Deploy to ${{ inputs.environment }} environment
         env:
           APP_NAME: ${{ inputs.app-name }}
-          CONFIG_FOLDER: ${{ inputs.app-config-folder }}
+          CONFIG_FILE_NAME: ${{ inputs.config-file-name }}
           ENV: ${{ inputs.environment }}
           IMAGE_TAG: ${{ inputs.image-tag }}
         run: |
-          cd $CONFIG_FOLDER
-          sed "s/newTag: .*/newTag: $IMAGE_TAG/" kustomization.yaml > tmp && mv tmp kustomization.yaml
+          sed "s/tag: .*/tag: $IMAGE_TAG/" $CONFIG_FILE_NAME > tmp && mv tmp $CONFIG_FILE_NAME
           if [[ -z $(git status --porcelain) ]]
           then
             echo "TAG_UPDATED=false" >> $GITHUB_ENV
