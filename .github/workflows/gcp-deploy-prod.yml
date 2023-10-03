@@ -12,7 +12,7 @@ jobs:
       app-name: mastodon
       image-tag: ${{ github.ref_name }}
       environment: production
-      app-config-folder: kubernetes/mastodon/env/prod
+      config-file-name: kubernetes/mastodon/values-prod.yaml
       branch: gcloud
     secrets:
       ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
