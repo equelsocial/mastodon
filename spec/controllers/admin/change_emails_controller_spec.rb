@@ -38,9 +38,9 @@ RSpec.describe Admin::ChangeEmailsController do
 
       expect(user.email).to eq previous_email
       expect(user.unconfirmed_email).to eq 'test@example.com'
-      # expect(user.confirmation_token).to_not be_nil  # EQUEL UPDATE: Comment out
+      expect(user.confirmation_token).to_not be_nil
 
-      # expect(UserMailer).to have_received(:confirmation_instructions).with(user, user.confirmation_token, { to: 'test@example.com' })  # EQUEL UPDATE: Comment out
+      expect(UserMailer).to have_received(:confirmation_instructions).with(user, user.confirmation_token, { to: 'test@example.com' })
 
       expect(response).to redirect_to(admin_account_path(user.account.id))
     end

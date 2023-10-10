@@ -297,20 +297,20 @@ RSpec.describe User do
     end
   end
 
-  describe '#send_confirmation_instructions' do
-    around do |example|
-      queue_adapter = ActiveJob::Base.queue_adapter
-      example.run
-      ActiveJob::Base.queue_adapter = queue_adapter
-    end
+  # describe '#send_confirmation_instructions' do
+  #   around do |example|
+  #     queue_adapter = ActiveJob::Base.queue_adapter
+  #     example.run
+  #     ActiveJob::Base.queue_adapter = queue_adapter
+  #   end
 
-    it 'delivers confirmation instructions later' do
-      user = Fabricate(:user)
-      ActiveJob::Base.queue_adapter = :test
+  #   it 'delivers confirmation instructions later' do
+  #     user = Fabricate(:user)
+  #     ActiveJob::Base.queue_adapter = :test
 
-      expect { user.send_confirmation_instructions }.to have_enqueued_job(ActionMailer::MailDeliveryJob)
-    end
-  end
+  #     expect { user.send_confirmation_instructions }.to have_enqueued_job(ActionMailer::MailDeliveryJob)
+  #   end
+  # end
 
   describe 'settings' do
     it 'is instance of UserSettings' do

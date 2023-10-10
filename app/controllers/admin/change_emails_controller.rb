@@ -23,7 +23,7 @@ module Admin
 
         log_action :change_email, @user
 
-        # @user.send_confirmation_instructions  # EQUEL UPDATE
+        @user.send_confirmation_instructions
       end
 
       redirect_to admin_account_path(@account.id), notice: I18n.t('admin.accounts.change_email.changed_msg')
