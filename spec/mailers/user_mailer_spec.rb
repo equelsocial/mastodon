@@ -5,34 +5,35 @@ require 'rails_helper'
 describe UserMailer do
   let(:receiver) { Fabricate(:user) }
 
-  describe 'confirmation_instructions' do
-    let(:mail) { described_class.confirmation_instructions(receiver, 'spec') }
+  # EQUEL UPDATE: Comment out the following to disable email confirmation which should be done on Equel
+  # describe 'confirmation_instructions' do
+  #   let(:mail) { described_class.confirmation_instructions(receiver, 'spec') }
 
-    it 'renders confirmation instructions' do
-      receiver.update!(locale: nil)
-      expect(mail.body.encoded).to include I18n.t('devise.mailer.confirmation_instructions.title')
-      expect(mail.body.encoded).to include 'spec'
-      expect(mail.body.encoded).to include Rails.configuration.x.local_domain
-    end
+  #   it 'renders confirmation instructions' do
+  #     receiver.update!(locale: nil)
+  #     expect(mail.body.encoded).to include I18n.t('devise.mailer.confirmation_instructions.title')
+  #     expect(mail.body.encoded).to include 'spec'
+  #     expect(mail.body.encoded).to include Rails.configuration.x.local_domain
+  #   end
 
-    include_examples 'localized subject',
-                     'devise.mailer.confirmation_instructions.subject',
-                     instance: Rails.configuration.x.local_domain
-  end
+  #   include_examples 'localized subject',
+  #                    'devise.mailer.confirmation_instructions.subject',
+  #                    instance: Rails.configuration.x.local_domain
+  # end
 
-  describe 'reconfirmation_instructions' do
-    let(:mail) { described_class.confirmation_instructions(receiver, 'spec') }
+  # describe 'reconfirmation_instructions' do
+  #   let(:mail) { described_class.confirmation_instructions(receiver, 'spec') }
 
-    it 'renders reconfirmation instructions' do
-      receiver.update!(email: 'new-email@example.com', locale: nil)
-      expect(mail.body.encoded).to include I18n.t('devise.mailer.reconfirmation_instructions.title')
-      expect(mail.body.encoded).to include 'spec'
-      expect(mail.body.encoded).to include Rails.configuration.x.local_domain
-      expect(mail.subject).to eq I18n.t('devise.mailer.reconfirmation_instructions.subject',
-                                        instance: Rails.configuration.x.local_domain,
-                                        locale: I18n.default_locale)
-    end
-  end
+  #   it 'renders reconfirmation instructions' do
+  #     receiver.update!(email: 'new-email@example.com', locale: nil)
+  #     expect(mail.body.encoded).to include I18n.t('devise.mailer.reconfirmation_instructions.title')
+  #     expect(mail.body.encoded).to include 'spec'
+  #     expect(mail.body.encoded).to include Rails.configuration.x.local_domain
+  #     expect(mail.subject).to eq I18n.t('devise.mailer.reconfirmation_instructions.subject',
+  #                                       instance: Rails.configuration.x.local_domain,
+  #                                       locale: I18n.default_locale)
+  #   end
+  # end
 
   describe 'reset_password_instructions' do
     let(:mail) { described_class.reset_password_instructions(receiver, 'spec') }
