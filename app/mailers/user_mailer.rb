@@ -16,9 +16,9 @@ class UserMailer < Devise::Mailer
     @token    = token
     @instance = Rails.configuration.x.local_domain
 
-    return unless @resource.active_for_authentication?
-
     # EQUEL UPDATE: Comment out the following to disable email confirmation which should be done on Equel
+    # return unless @resource.active_for_authentication?
+
     # I18n.with_locale(locale) do
     #   mail to: @resource.unconfirmed_email.presence || @resource.email,
     #        subject: I18n.t(@resource.pending_reconfirmation? ? 'devise.mailer.reconfirmation_instructions.subject' : 'devise.mailer.confirmation_instructions.subject', instance: @instance),

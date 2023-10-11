@@ -470,9 +470,10 @@ RSpec.describe User do
         expect(user.confirmed_at).to be_present
       end
 
-      it 'delivers mails' do
-        expect(ActionMailer::Base.deliveries.count).to eq 2
-      end
+      # EQUEL UPDATE: Comment out the following to disable email confirmation which should be done on Equel
+      # it 'delivers mails' do
+      #   expect(ActionMailer::Base.deliveries.count).to eq 2
+      # end
     end
 
     context 'when user is not new' do
