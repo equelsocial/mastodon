@@ -23,6 +23,7 @@ class AccountSearchService < BaseService
               query: {
                 bool: {
                   must: must_clauses,
+                  must_not: must_not_clauses,
                 },
               },
 
@@ -47,6 +48,10 @@ class AccountSearchService < BaseService
       else
         [core_query]
       end
+    end
+
+    def must_not_clauses
+      []
     end
 
     def should_clauses
@@ -146,13 +151,23 @@ class AccountSearchService < BaseService
   end
 
   def call(query, account = nil, options = {})
-    @query   = query&.strip&.gsub(/\A@/, '')
-    @limit   = options[:limit].to_i
-    @offset  = options[:offset].to_i
-    @options = options
-    @account = account
+    MastodonOTELTracer.in_span('AccountSearchService#call') do |span|
+      @query   = query&.strip&.gsub(/\A@/, '')
+      @limit   = options[:limit].to_i
+      @offset  = options[:offset].to_i
+      @options = options
+      @account = account
 
-    search_service_results.compact.uniq
+      span.add_attributes(
+        'search.offset' => @offset,
+        'search.limit' => @limit,
+        'search.backend' => Chewy.enabled? ? 'elasticsearch' : 'database'
+      )
+
+      search_service_results.compact.uniq.tap do |results|
+        span.set_attribute('search.results.count', results.size)
+      end
+    end
   end
 
   private
@@ -218,7 +233,7 @@ class AccountSearchService < BaseService
 
     records = query_builder.build.limit(limit_for_non_exact_results).offset(offset).objects.compact
 
-    ActiveRecord::Associations::Preloader.new(records: records, associations: :account_stat)
+    ActiveRecord::Associations::Preloader.new(records: records, associations: [:account_stat, { user: :role }]).call
 
     records
   rescue Faraday::ConnectionFailed, Parslet::ParseFailed

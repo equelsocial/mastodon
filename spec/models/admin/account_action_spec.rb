@@ -47,11 +47,9 @@ RSpec.describe Admin::AccountAction do
       end
 
       it 'queues Admin::SuspensionWorker by 1' do
-        Sidekiq::Testing.fake! do
-          expect do
-            subject
-          end.to change { Admin::SuspensionWorker.jobs.size }.by 1
-        end
+        expect do
+          subject
+        end.to change { Admin::SuspensionWorker.jobs.size }.by 1
       end
     end
 
@@ -71,20 +69,22 @@ RSpec.describe Admin::AccountAction do
       end
     end
 
-    it 'creates Admin::ActionLog' do
+    it 'sends notification, log the action, and closes other reports', :aggregate_failures do
+      other_report = Fabricate(:report, target_account: target_account)
+
+      emails = []
       expect do
-        subject
-      end.to change(Admin::ActionLog, :count).by 1
-    end
+        emails = capture_emails { subject }
+      end.to (change(Admin::ActionLog.where(action: type), :count).by 1)
+         .and(change { other_report.reload.action_taken? }.from(false).to(true))
 
-    it 'calls process_email!' do
-      expect(account_action).to receive(:process_email!)
-      subject
-    end
+      expect(emails).to contain_exactly(
+        have_attributes(
+          to: contain_exactly(target_account.user.email)
+        )
+      )
 
-    it 'calls process_reports!' do
-      expect(account_action).to receive(:process_reports!)
-      subject
+      expect(LocalNotificationWorker).to have_enqueued_sidekiq_job(target_account.id, anything, 'AccountWarning', 'moderation_warning')
     end
   end
 

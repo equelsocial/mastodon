@@ -36,7 +36,9 @@ class LinkDetailsExtractor
     end
 
     def language
-      json['inLanguage']
+      lang = json['inLanguage']
+      lang = lang.first if lang.is_a?(Array)
+      lang.is_a?(Hash) ? (lang['alternateName'] || lang['name']) : lang
     end
 
     def type
@@ -154,7 +156,7 @@ class LinkDetailsExtractor
   end
 
   def title
-    html_entities.decode(structured_data&.headline || opengraph_tag('og:title') || document.xpath('//title').map(&:content).first)
+    html_entities.decode(structured_data&.headline || opengraph_tag('og:title') || document.xpath('//title').map(&:content).first).strip
   end
 
   def description
@@ -191,6 +193,10 @@ class LinkDetailsExtractor
 
   def author_url
     structured_data&.author_url
+  end
+
+  def author_account
+    opengraph_tag('fediverse:creator')
   end
 
   def embed_url
@@ -280,6 +286,6 @@ class LinkDetailsExtractor
   end
 
   def html_entities
-    @html_entities ||= HTMLEntities.new
+    @html_entities ||= HTMLEntities.new(:expanded)
   end
 end

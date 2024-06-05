@@ -25,13 +25,11 @@ class Admin::Metrics::Dimension::SoftwareVersionsDimension < Admin::Metrics::Dim
   end
 
   def ruby_version
-    value = "#{RUBY_VERSION}p#{RUBY_PATCHLEVEL}"
-
     {
       key: 'ruby',
       human_key: 'Ruby',
-      value: value,
-      human_value: value,
+      value: "#{RUBY_VERSION}p#{RUBY_PATCHLEVEL}",
+      human_value: RUBY_DESCRIPTION,
     }
   end
 
