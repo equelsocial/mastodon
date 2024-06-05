@@ -79,7 +79,7 @@ RSpec.describe 'credentials API' do
     end
 
     describe 'with invalid data' do
-      let(:params) { { note: 'This is too long. ' * 30 } }
+      let(:params) { { note: 'This is too long. ' * 500 } }
 
       it 'returns http unprocessable entity' do
         subject
